@@ -1,0 +1,18 @@
+@import "../../tools/variables";
+@import "../../tools/mix";
+
+.page-order-index {
+  padding: 20px;
+  .huise {
+    color: $c37;
+  }
+  .top-bar {
+    display: -webkit-box;
+    -webkit-box-pack: end;
+  }
+  .order-list-wrap {
+    .text1 {
+      @include ellipsis(1, 18px);
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import "../../tools/variables";
+@import "../../tools/mix";
+.ellipsis {
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.page-coupon-index {
+    font-size:12px;
+    color:$c3;
+    .page-coupon-index-top {
+        line-height:79px;
+        text-indent:20px;
+        border-bottom:1px solid $c41;
+        font-size:14px;
+        color:$c46;
+    }
+    .page-coupon-index-content {
+        padding-left:20px;
+        .content-section {
+            margin-bottom:15px;
+            header {
+                line-height:50px;
+                font-size:14px;
+                font-weight:bold;
+                color:$c43;
+            }
+            .content-ul {
+                overflow:hidden;
+                li {
+                    float:left;
+                    width:25%;
+                    a { 
+                        display:-webkit-box;
+                        height:40px;
+                        margin:0 20px 20px 0;
+                        padding:10px;
+                        background:$c40;
+                        .content-ul-li-img {
+                            width:40px;
+                            height:40px;
+                            margin-right:10px;
+                            border-radius:5px;
+                            background:$c48;
+                            text-align:center;
+                            i {
+                                line-height:40px;
+                                font-size:20px;
+                                color:$c1;
+                            }
+                        }
+                        .content-ul-li-word {
+                            -webkit-box-flex:1;
+                            h3 {
+                                height:20px;
+                                line-height:20px;
+                                font-size:14px;
+                                color:$c46;
+                                @extend .ellipsis;
+                            }
+                            p {
+                                height:20px;
+                                line-height:20px;
+                                color:$c3;
+                                @extend .ellipsis;
+                            }
+                        }
+                    }
+                }
+                &.expand {
+                    li a .content-ul-li-img {
+                        background:$c49;
+                    }
+                }
+                &.third {
+                    li a .content-ul-li-img {
+                        background:$c50;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import "../../tools/variables";
+@import "../../tools/mix";
+
+.page-member-level {
+  padding: 20px;
+  .level-wrap {
+    .default {
+      padding: 2px 5px;
+      background: $c44;
+      color: $c1;
+    }
+  }
+}

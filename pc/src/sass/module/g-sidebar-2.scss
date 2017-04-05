@@ -1,0 +1,49 @@
+@import "../tools/variables";
+@import "../tools/mix";
+
+//左侧悬浮二级导航
+#g-sidebar-2 {
+  z-index: 100;
+  position: fixed;
+  left: 100px;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  color: #5f626b;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: center;
+  overflow-y: auto;
+  background: url(../images/common/sidebar-2-bg.png) repeat-y #eeeeee;
+  @media screen and (max-height:700px){
+    line-height: 40px;
+    font-size: 12px;
+  }
+
+  &::-webkit-scrollbar {
+    display:block;
+    width:0;
+    border-radius:8px;
+    background-color:#F0F0F0;
+  }
+
+  .g-sidebar-2-title {
+    height: 79px;
+    line-height: 79px;
+    border-bottom: 1px solid #dddddd;
+    color: $c37;
+  }
+  .g-sidebar-2-wrap {
+    a {
+      display: block;
+      color: #5f626b;
+      &:hover {
+        color: #38f;
+      }
+      &.active {
+        color: #13151a;
+        background: #fff;
+      }
+    }
+  }
+}

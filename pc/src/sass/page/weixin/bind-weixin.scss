@@ -1,0 +1,72 @@
+@import "../../tools/mix";
+
+.g-page-bind-weixin {
+  padding: 20px;
+  box-sizing: border-box;
+  .title{
+    height: 50px;
+    line-height:50px;
+    font-weight:bold;
+  }
+  .content{
+    background: #f5f5f5;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .content-body{
+      &>div{
+        margin-bottom: 20px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+      .url,.token{
+        position: relative;
+        input{
+          position: absolute;
+          left: 0;
+          top:0;
+          z-index: -12;
+        }
+        .copy{
+          margin-left:20px;
+          color: #0089ff;
+          cursor: pointer;
+        }
+      }
+
+      border:1px solid #e5e5e5;
+      padding:20px;
+      box-sizing: border-box;
+      background: #fff;
+
+      .left{
+        display: inline-block;
+        width: 110px;
+        text-align: right;
+      }
+      i,.correct-mail{
+        color: red;
+        margin-left: 6px;
+      }
+      .ui-select{
+        display: inline-block;
+      }
+      .ui-input{
+        width: 220px;
+      }
+    }
+    .content-footer{
+      margin-top: 10px;
+      color: #888d99;
+      a{
+        color: #000;
+      }
+    }
+  }
+  .save{
+    margin: 40px auto;
+  }
+
+
+}

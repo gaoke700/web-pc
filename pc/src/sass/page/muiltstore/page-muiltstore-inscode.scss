@@ -1,0 +1,190 @@
+@import "../../tools/variables";
+
+.page-muiltstore-inscode {
+  padding: 0 0 70px;
+  font-size: 14px;
+  .c-table-list { width: 1%;}
+
+  .btnn {
+    background:$c36;
+    border-radius:5px;
+    width:80px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+
+  .btnn2 {
+    background: #b8b8b8;
+  }
+
+  .page-main {}
+
+  .validation-wrap {
+    .input-wrap {
+      display: -webkit-box;
+      -webkit-box-align: center;
+      border-bottom:1px solid #dddddd;
+      border-top: none;
+      margin:0 20px;
+      padding:20px 0;
+
+      .value {
+        display: block;
+        width: 35%;
+        min-width: 200px;
+        background:#ffffff;
+        border:1px solid #dddddd;
+        height:22px;
+        margin-right: 20px;
+        line-height: 22px;
+        padding: 8px 10px;
+      }
+    }
+
+    .introduce {
+      padding: 20px;
+      display: -webkit-box;
+      img {
+        display: block;
+      }
+      .img1 {
+        width: 337px;
+        height: 593px;
+        margin-right: 70px;
+      }
+      .img2 {
+        width: 430px;
+        //height: 330px;
+      }
+      .text-wrap {
+        .text1 {
+          font-size:14px;
+          font-weight:bold;
+          color:$c43;
+          padding-bottom: 20px;
+        }
+        .text2 {
+          padding-top: 15px;
+          font-size:12px;
+          color:$c37;
+        }
+        .path {
+          position: relative;
+          border:1px solid #eeeeee;
+          margin-bottom: 20px;
+          width:250px;
+          padding: 20px 40px;
+          color:#595959;
+          line-height:25px;
+          display: -webkit-box;
+          -webkit-box-align: center;
+          -webkit-box-pack: justify;
+          .img3 {
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+    }
+
+    .code-info {
+      border-top: none;
+      padding: 15px 20px 30px;
+      display: none;
+      &-status {
+        & > div {
+          background:#e9f8f7;
+          border-bottom: 1px solid #2ba79e;
+          height:50px;
+          line-height: 50px;
+          padding-left: 15px;
+          margin-bottom: 10px;
+          font-size: 18px;
+          em { font-size: 14px;}
+          span { color: #2ba79e; padding-left: 10px; }
+        }
+        .status-has {
+          background:#fdf0ee;
+          border-bottom-color: #e75c45;
+          span { color: #e75c45;}
+        }
+        .status-error {
+          background:#e7e7e7;
+          border-bottom-color: #595959;
+          span { color: #34393d;}
+        }
+      }
+
+      &-list {
+        max-width: 700px;
+        font-size: 0;
+        li {
+          display: inline-block;
+          font-size: 14px;
+          width: 340px;
+          padding-right: 10px;
+          line-height: 35px;
+          height: 35px;
+        }
+      }
+
+      &-table {
+        padding-bottom: 30px;
+      }
+
+      .btn-wrap {
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+      }
+    }
+
+    .other-wrap {
+      border:1px solid #eeeeee;
+      border-top: none;
+      padding: 140px 20px;
+      .status-text {
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        font-size: 24px;
+        span { display: block;}
+      }
+      .btnn2 {
+        display: inline-block;
+        cursor: pointer;
+        background:#fdf0ee;
+        border-radius:5px;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        color: #e75c45;
+        border: 1px solid #d75c45;
+      }
+    }
+  }
+
+  .record-wrap {
+    .finder-filter-active {
+      padding: 15px 20px;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      & > div { padding-right: 30px;}
+      .btnn3 {
+        background:$c36;
+        border-radius:5px;
+        width:80px;
+        height:30px;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+  }
+}

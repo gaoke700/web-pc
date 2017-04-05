@@ -1,0 +1,151 @@
+@import "../../tools/variables";
+@import "../../tools/mix";
+
+//订单列表弹窗,售后订单弹窗（样式公用）
+.g-dialog-tabs {
+  .contents {
+
+    //公共样式
+    padding: 20px;
+    line-height: 24px;
+    .none {
+      display: none;
+    }
+    //标题
+    .titles {
+      color: #0089ff;
+      margin-top: 12px;
+      border-bottom: 1px solid #e6e7ed;
+      span {
+        display: inline-block;
+        height: 100%;
+        border-bottom: 1px solid #0089ff;
+      }
+    }
+
+
+    //订单列表样式
+    .basic-details {
+      .symbol{
+        display: flex;
+        &>*{
+          margin-right: 14px;
+        }
+
+      }
+      .consignee-message {
+        .goods-message-content {
+          display: flex;
+          .content-right {
+            margin-left: 60px;
+          }
+        }
+      }
+    }
+    .goods-note {
+      .new-note-content > div, .old-note-content > div {
+        margin-top: 16px;
+        display: flex;
+        align-items: flex-start;
+
+        .before {
+          text-align: right;
+          width: 16%;
+          margin-right: 30px;
+
+        }
+        .after {
+          width: 80%;
+          text-align: left;
+        }
+        .left {
+          text-align: right;
+          width: 12%;
+          margin-right: 30px;
+        }
+        .right {
+          display: flex;
+          label {
+            display: flex;
+            align-items: center;
+            margin-right: 16px;
+            span {
+              font-size: 20px;
+            }
+          }
+          textarea {
+            width: 552px;
+            height: 150px;
+            margin-right: 10px;
+          }
+        }
+        &.textarea-box {
+
+          align-items: baseline;
+          .right {
+            align-items: flex-end;
+          }
+        }
+      }
+      .save {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+      }
+      .radio-wrap {
+        .red {
+          color: red;
+        }
+        .orange {
+          color: orange;
+        }
+        .green {
+          color: green;
+        }
+        .blue {
+          color: blue;
+        }
+        .purple {
+          color: red;
+        }
+        .red {
+          color: red;
+        }
+        i {
+          top: 4px;
+        }
+      }
+    }
+
+    //售后订单样式
+    .records{
+      .details{
+        display: flex;
+        align-items: flex-start;
+        .details-left{
+          width: 80%;
+          margin-right: 2%;
+          &>div{
+            display: flex;
+            .right{
+              width: 80%;
+              .reason-img{
+                border:1px solid transparent;
+                width: 50px;
+                height: 50px;
+                &:hover{
+                  width: 224px;
+                  height: 224px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+
+    }
+
+  }
+}

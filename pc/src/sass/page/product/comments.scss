@@ -1,0 +1,15 @@
+@import "../../tools/variables";
+@import "../../tools/mix";
+
+.page-product-comments {
+  padding: 20px;
+  .top-bar {
+    display: -webkit-box;
+    -webkit-box-pack: end;
+  }
+  .comments-wrap {
+    .text1 {
+      @include ellipsis(1, 18px);
+    }
+  }
+}

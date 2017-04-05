@@ -1,0 +1,111 @@
+@import "../tools/variables";
+
+.c-component-cutFigure {
+  .cutFigure {
+    padding: 0 17px 30px;
+    display: -webkit-box;
+    -webkit-box-align: start;
+    &-img {
+      background:#efefef;
+      border-radius:2px;
+      width:375px;
+      overflow: hidden;
+      border: 1px dashed #e23f24;
+      &-show {
+        position: relative;
+        &-splice {
+          &-list {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            border:2px solid #24baab;
+            background: rgba(36,186,171,0.5);
+            &-active {
+              border-color: #E75C45;
+              background: rgba(231, 92, 69, 0.5);
+            }
+            .div-move {
+              width:70px;
+              height:70px;
+              cursor: move;
+            }
+            .div-scale {
+              width: 0;
+              height: 0;
+              position: absolute;
+              right: 1px;
+              bottom: 1px;
+              border-bottom: 5px solid #fff;
+              border-left: 5px solid transparent;
+              cursor: nw-resize;
+            }
+          }
+        }
+        img {
+          display: block;
+        }
+      }
+      &-upload {
+        height:230px;
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        cursor: pointer;
+        color: #e75c45;
+        i:before { margin: 0 auto;}
+        p { text-align: center; padding-top: 25px;}
+      }
+    }
+
+    &-link {
+      padding-left: 10px;
+      &-title { font-size: 14px; padding-bottom: 20px;}
+      .add-link {
+        background:#e75c45;
+        border-radius:8px;
+        width:140px;
+        height:30px;
+        line-height: 30px;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+      }
+      &-list {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        border:1px solid #c8c5ce;
+        border-radius:5px;
+        width:178px;
+        height:28px;
+        line-height: 28px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        overflow: hidden;
+        &-active {
+          border-color: #E75C45;
+        }
+        .text {
+          @include ellipsis();
+          -webkit-box-flex: 1;
+          padding: 0 10px;
+          color: #53575a;
+        }
+        i {
+          display: -webkit-box;
+          -webkit-box-pack: center;
+          -webkit-box-align: center;
+          background: #eaeaea;
+        }
+        .icons-link2 {
+          width: 26px;
+          height: 26px;
+          margin-right: 1px;
+        }
+        .icons-close {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+}

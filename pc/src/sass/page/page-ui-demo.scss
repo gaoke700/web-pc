@@ -1,0 +1,43 @@
+@import "../tools/variables";
+@import "../tools/mix";
+
+.page-ui-demo {
+  &-hd {
+    padding: 20px;
+    border-bottom: 1px solid #eeeeee;
+  }
+  .btn-wrap {
+    display: -webkit-box;
+    .ui-btn {
+      margin-right: 10px;
+    }
+  }
+  .select-wrap {
+    display: -webkit-box;
+    .ui-select {
+      margin-right: 10px;
+    }
+  }
+  .radio-wrap {
+    display: -webkit-box;
+    .ui-radio {
+      margin-right: 10px;
+    }
+  }
+  .checkbox-wrap {
+    display: -webkit-box;
+    .ui-checkbox {
+      margin-right: 10px;
+    }
+  }
+  .popover-wrap {
+    display: -webkit-box;
+    & > div {
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
+

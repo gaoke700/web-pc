@@ -1,0 +1,23 @@
+@import "../../tools/variables";
+@import "../../tools/mix";
+
+.page-tag {
+  padding: 20px;
+  .tag-wrap {
+    padding-top: 20px;
+  }
+}
+.g-dialog-container {
+	.g-dialog-content {
+		.g-dialog-content-default {
+			padding: 40px 0 60px;
+		}
+	}
+}
+.g-dialog-add-category {
+	.input-style {
+		.before {
+			width:30%;
+		}
+	}
+}

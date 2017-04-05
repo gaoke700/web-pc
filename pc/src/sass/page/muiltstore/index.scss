@@ -1,0 +1,19 @@
+@import "../../tools/variables";
+
+.page-muiltStore-index {
+  padding: 20px;
+  .bar {
+    background: $c40;
+    padding: 20px;
+    position: relative;
+    .txt {
+      color: $c45;
+    }
+    .switch {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      margin-top: -10px;
+    }
+  }
+}

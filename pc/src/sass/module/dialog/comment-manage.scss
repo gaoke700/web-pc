@@ -1,0 +1,81 @@
+//商品详情评论管理
+.g-dialog-goods-comments{
+  font-size:12px;
+  width: 600px;
+  height: 480px;
+  padding: 20px 30px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  line-height:26px;
+  span{
+    display: inline-block;
+    margin-left: 12px;
+  }
+  .comment-top{
+    display: flex;
+    padding-bottom: 16px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e6e7ed;
+    .top-left-img{
+      width: 100px;
+      height: 100px;
+      border-radius: 5px;
+    }
+    .top-right{
+      margin-left:20px;
+
+    }
+  }
+  .comment-middle{
+    padding: 16px 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e6e7ed;
+    .comment-degree{
+      span{
+        color: #fc152e;
+        font-size:16px;
+      }
+    }
+    .comment-content{
+      display: flex;
+      line-height: 20px;
+      span{
+        width: 85%;
+      }
+    }
+    .how-to-display{
+      display: flex;
+      align-items: center;
+      label{
+        margin-left: 12px;
+      }
+    }
+  }
+  .comment-bottom{
+    padding: 16px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .reply-content{
+      display: flex;
+      line-height: 20px;
+      span{
+        width: 85%;
+      }
+    }
+    .bottom-textarea{
+      display: flex;
+      align-items: flex-end;
+      textarea{
+        width: 470px;
+        height: 80px;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,72 @@
+@import "../tools/variables";
+
+.c-component-sliderImg {
+  &-style {
+    padding: 10px 25px 30px;
+    .choose-time {
+      font-size:14px;
+      color:#576369;
+      position: relative;
+      z-index: 5;
+      width:176px;
+    }
+
+    .title {
+      background:#ffffff;
+      border-radius:5px;
+      border:1px solid #e6e6e6;
+      height:34px;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      overflow: hidden;
+      cursor: pointer;
+      p {
+        -webkit-box-flex: 1;
+        padding: 0 15px;
+      }
+      span {
+        display: block;
+        background:#f9f9f9;
+        width:27px;
+        height:34px;
+        border-left: 1px solid #e6e6e6;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        i {
+          display: block;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 10px solid #fd7933;
+        }
+      }
+    }
+
+    .option-wrap {
+      position: absolute;
+      left: 0;
+      top: 36px;
+      background:#ffffff;
+      border:1px solid #e6e6e6;
+      border-radius:5px;
+      width: 100%;
+      padding-top: 5px;
+      box-sizing: border-box;
+      display: none;
+      .option {
+        cursor: pointer;
+        color: #c6c6c6;
+        padding: 0 30px;
+        line-height: 25px;
+        margin-bottom: 5px;
+        &:hover, &.active {
+          background:#f9f9f9;
+          color:#798389;
+        }
+      }
+    }
+  }
+}
+

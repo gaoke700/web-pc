@@ -1,0 +1,168 @@
+@import "../tools/variables";
+@import "../tools/mix";
+
+//左侧悬浮一级导航
+#g-sidebar-1 {
+  background: #252834;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  font-size: 14px;
+  overflow-y: auto;
+  padding-bottom: 70px;
+  box-sizing: border-box;
+  z-index: 10;
+  &::-webkit-scrollbar {
+    display:block;
+    width:0;
+    border-radius:8px;
+    background-color:rgba(0,0,0,0);
+  }
+  .logo {
+    display: block;
+    padding: 14px 0;
+    span {
+      display: block;
+      width: 52px;
+      height: 49px;
+      padding-bottom: 3px;
+      border-radius: 50%;
+      background: #fff;
+      margin: 0 auto;
+      font-size: 32px;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      color: $c47;
+    }
+    //background: url("../images/common/logo.png") no-repeat center;
+  }
+  .user-name {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    background: #fe313c;
+    color: #fff;
+    text-align: center;
+    @include ellipsis(1, 60px);
+    .user-name-padding {
+      width: 100%;
+      padding: 20px 0;
+      position: absolute;
+      bottom: 60px;
+      left: 0;
+      z-index: 1;
+    }
+    .user-name-hover {
+      position: absolute;
+      bottom: 76px;
+      left: 0;
+      z-index:2;
+      &::before {
+        display:inline-block;
+        content:'';
+        width:0;
+        height:0;
+        border:6px solid transparent;
+        border-top-color:#fff;
+        position:absolute;
+        bottom:-12px;
+        left:50%;
+        margin-left:-6px;
+        z-index:3;
+      }
+      ul{
+        padding:10px 0 10px;
+        background: #fff;
+        border-radius:5px;
+        li {
+          a {
+            display:block;
+            width:70px;
+            height: 26px;
+            line-height: 26px;
+            padding:0 10px 0 20px;
+            font-size:12px;
+            text-align: left;
+            color: #333;
+          }
+          &:hover {
+            a {
+              color:#0089ff;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      overflow:visible;
+      .user-name-hover {
+        display:block;
+      }
+    }
+    @media screen and (max-height:700px){
+      @include ellipsis(1, 40px);
+      .user-name-hover {
+        bottom: 56px;
+      }
+    }
+  }
+  .sidebar-1-wrap {
+    a {
+      display: block;
+      color: #8a8d96;
+      text-align: center;
+      line-height: 50px;
+      border-left: 4px solid #252834;
+      padding-right: 10px;
+      i {
+        padding-right: 10px;
+        color: #8a8d96;
+        font-size: 20px;
+      }
+      &:hover {
+        background: #383c49;
+        border-left: 4px solid #383c49;
+      }
+      &.active {
+        background: #eeeeee;
+        border-left: 4px solid #fe313c;
+        color: #13151a;
+        i { color: #13151a;}
+        &:hover {
+          background: #eeeeee;
+          border-left: 4px solid #fe313c;
+          color: #13151a;
+        }
+      }
+      .yingxiao:before {
+        display:inline-block;
+        vertical-align: middle;
+        content: "";
+        background: url(../images/common/nav-1-1.png) no-repeat center;
+        width: 20px;
+        height: 20px;
+      }
+      &:nth-last-child(2) {
+        margin-top: 40px;
+      }
+    }
+    @media screen and (max-height:700px){
+      a {
+        line-height: 40px;
+        font-size: 12px;
+        i {
+          padding-right: 10px;
+          color: #8a8d96;
+          font-size: 16px;
+        }
+        &:nth-last-child(2) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

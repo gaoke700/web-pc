@@ -1,0 +1,41 @@
+@import "../tools/variables";
+@import "common";
+
+.c-component-hdBanner {
+  &-style {
+    margin: 0 24px 20px;
+    background: rgba(244,244,244,0.5);
+    border-radius:15px;
+    p {
+      line-height: 25px;
+      padding-top: 6px;
+      padding-left: 20px;
+    }
+    ul {
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      padding: 14px 14px 20px;
+    }
+    li {
+      border-bottom: 4px solid rgba(244,244,244,0.5);
+      width: 90px;
+      padding: 0 0 15px 0;
+      background: rgba(0,0,0,0);
+      cursor: pointer;
+      &.active {
+        border-bottom-color: $c26;
+      }
+      img {
+        display: block;
+        width: 62px;
+        height: 34px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &-update-img {
+    padding: 25px;
+  }
+}

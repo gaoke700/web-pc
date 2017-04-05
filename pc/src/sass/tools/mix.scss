@@ -1,0 +1,15 @@
+@function fontSize($px) {
+  @return $px / 75 * 2rem;
+}
+
+@mixin ellipsis($lineClamp:1, $lineHeight:18px){
+  display: block;
+  line-height: $lineHeight;
+  height: $lineHeight * $lineClamp;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lineClamp;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal;
+}

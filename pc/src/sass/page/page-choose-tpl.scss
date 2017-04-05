@@ -1,0 +1,59 @@
+@import "../tools/variables";
+
+.page-choose-tpl {
+  p { margin: 0; padding: 0;}
+  .item-wrap {
+    font-size: 0;
+    padding: 8px 8px 30px;
+  }
+  .item {
+    display: inline-block;
+    font-size: 14px;
+    width: 33.333%;
+    min-width: 220px;
+    padding: 8px;
+    box-sizing: border-box;
+    & > div {
+      padding: 54px 0 20px;
+      background:$c40;
+      border:1px solid $c12;
+      border-radius:2px;
+    }
+    img {
+      display: block;
+      width: 200px;
+      height: 356px;
+      margin: 0 auto;
+    }
+    .name {
+      padding: 35px 0 0 0;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: $c5;
+    }
+    .func {
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      span {
+        display: block;
+        width: 116px;
+        line-height: 40px;
+        text-align: center;
+        color: $c1;
+        background: $c5;
+        border: 1px solid $c5;
+        border-radius: 5px;
+        margin-right: 12px;
+        cursor: pointer;
+        &:last-child {margin-right: 0;}
+      }
+      .btn-choose-hd { width: 200px;}
+      .btn-preview {
+        color: $c5;
+        background: $c1;
+      }
+    }
+  }
+}

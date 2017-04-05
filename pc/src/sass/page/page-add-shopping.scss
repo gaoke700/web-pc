@@ -1,0 +1,129 @@
+@import "../tools/mix";
+
+.page-add-shopping {
+    padding: 20px;
+    .page-wrap {
+        padding-bottom: 40px;
+    }
+    .page-title {
+        font-size: 14px;
+        color: #3a3b40;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    .page-box {
+        padding: 20px;
+        background: #f5f5f5;
+    }
+    .page-input {
+        height: 35px;
+        line-height: 35px;
+        outline: none;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding-left: 10px;
+    }
+    .page-label-txt {
+        height: 35px;
+        line-height: 35px;
+        color: #3a3b40;
+        font-size: 14px;
+        width: 80px;
+    }
+    .page-label-row {
+        margin-bottom: 20px;
+        display: -webkit-box;
+    }
+    #shopping-num, #shopping-title {
+        width: 500px;
+    }
+    .shopping-img-hint {
+        font-size: 12px;
+        color: #888d99;
+        margin-left: 80px;
+    }
+    .shopping-guige-box {
+        -webkit-box-flex: 1;
+        .shopping-guige-type {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background: #ffffff;
+            margin-bottom: 10px;
+        }
+    }
+    #shopping-store, #shopping-store-num {
+        width: 300px;
+    }
+    .shopping-guige {
+        position: relative;
+        .ui-btn {
+            margin-left: 80px;
+        }
+        &.shopping-guige-can-del {
+            .shopping-guige-del {
+                display: block;
+            }
+        }
+        .shopping-guige-del {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            right: 0;
+            top: 0;
+            background: #dbe4eb;
+            display: none;
+        }
+    }
+    .page-btn {
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        .ui-btn {
+            margin: 0 10px;
+        }
+    }
+    .page-jiangjin-set {
+        border: 1px solid #ddd;
+        background: #ffffff;
+    }
+    .page-jiangjin-set-hd {
+        background: #f5f5f5;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 14px;
+        color: #6f737d;
+        display: -webkit-box;
+        .page-jiangjin-set-hd-btn {
+            width: 210px;
+            border: 1px solid #ddd;
+            border-top: none;
+            &:first-of-type {
+                border-left: none;
+                border-right: none;
+            }
+            &.page-jiangjin-set-hd-btn-active {
+                background: #ffffff;
+                border-bottom: none;
+                color: #0089ff;
+            }
+        }
+    }
+    .page-jiangjin-set-bd-cut {
+        display: none;
+        &.page-jiangjin-set-bd-cut-active {
+            display: block;
+        }
+    }
+    .page-jiangjin-set-bd {
+        padding: 30px 30px 0;
+        .page-label-txt {
+            width: 150px;
+        }
+    }
+    .page-jiangjin-set-hint {
+        margin-top: 6px;
+    }
+}

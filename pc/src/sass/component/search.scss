@@ -1,0 +1,47 @@
+@import "../tools/variables";
+
+.c-component-search {
+  .c-component-search-info {
+    padding-top: 20px;
+  }
+
+  .c-component-search-item {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    border:1px solid $c30;
+    width:373px;
+    height:98px;
+    margin: 0 auto 27px;
+    position: relative;
+    .btn-radio {
+      background: $c1;
+      border:1px solid $c30;
+      width:26px;
+      height:26px;
+      border-radius:50%;
+      position: absolute;
+      right: -13px;
+      top: -13px;
+      cursor: pointer;
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      i {
+        display: none;
+      }
+    }
+
+    &-active {
+      border:1px solid $c5;
+      .btn-radio {
+        background: $c5;
+        border:1px solid $c5;
+        i {
+          display: block;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,67 @@
+@import "../tools/variables";
+@import "../tools/mix";
+
+//左侧悬浮
+#g-sidebar {}
+
+//左侧悬浮一级导航
+@import "./g-sidebar-1";
+
+//左侧悬浮二级导航
+@import "./g-sidebar-2";
+
+//三级区块
+@import "./g-sidebar-3";
+
+//右侧内容区域
+#g-container {
+  margin-left: 0;
+  min-width: 1000px;
+  height:auto; min-height:100%;
+}
+
+html, body {height:100%;}
+
+//右侧内容区域页面区域
+#g-page {
+  padding-bottom:66px;
+}
+
+//版权
+#g-copyright {
+  height: 45px;
+  clear: both;
+  position:relative;
+  margin-top:-66px;
+  text-align: center;
+  padding: 10px 0;
+  background: #eeeeee;
+  border-top: 1px solid #dddddd;
+  a {
+    font-size: 140px;
+    display: block;
+    color: #bbbbbb;
+    height: 40px;
+    overflow: hidden;
+    padding-bottom: 5px;
+    i {
+      line-height: 40px;
+    }
+  }
+}
+
+.g-ui-body-bar-1 {
+  #g-container {
+    margin-left: 100px;
+    min-width: 900px;
+  }
+  #g-copyright { padding-left: 100px;}
+}
+
+.g-ui-body-bar-2 {
+  #g-container {
+    margin-left: 220px;
+    min-width: 850px;
+  }
+  #g-copyright { padding-left: 220px;}
+}

@@ -1,0 +1,16 @@
+@import "../../tools/variables";
+@import "../../tools/mix";
+
+.page-member-user-list {
+  padding: 20px;
+  .user-list-bar {
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+  }
+  .user-list-search {
+    display: -webkit-box;
+
+  }
+
+
+}

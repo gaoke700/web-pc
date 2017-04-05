@@ -1,0 +1,70 @@
+@import "../tools/variables";
+
+.c-component-navImg {
+  .radio-list-wrap {
+    font-size: 0;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    .radio-list-item {
+      display: inline-block;
+      font-size: 12px;
+      width: 130px;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      .radio-round {
+        background:#ffffff;
+        border:1px solid #dddddd;
+        border-radius:40px;
+        width:12px;
+        height:12px;
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        cursor: pointer;
+        em {
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #ddd;
+        }
+      }
+      .radio-value {
+        cursor: pointer;
+        padding-left: 15px;
+        color: #444444;
+      }
+      &.active {
+        .radio-round {
+          em {
+            background:#576369;
+          }
+        }
+        .radio-value {
+          color: #444444;
+        }
+      }
+    }
+  }
+
+  &-style {
+
+  }
+
+  &-hd {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    padding: 10px 0 5px 35px;
+    .pl-name {
+      width: 130px;
+      line-height: 38px;
+      span {
+        color:#e75c45;
+        padding-right: 5px;
+      }
+    }
+    .pl-content {
+      -webkit-box-flex: 1;
+    }
+  }
+}

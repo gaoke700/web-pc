@@ -1,0 +1,49 @@
+@import "../../tools/variables";
+@import "../../tools/mix";
+
+.page-product-index {
+  padding: 20px;
+  .small-bar {
+    padding-top: 20px;
+    display: -webkit-box;
+    & > div {
+      margin-right: 10px;
+    }
+  }
+
+  .order-list-wrap {
+    .img {
+      display: block;
+      width: 70px;
+      height: 70px;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+    .good-name {
+      width: 100%;
+      text-align: left;
+      p:first-child { color: $c37;}
+    }
+    .ellipsis { @include ellipsis(1, 18px); }
+  }
+
+  .order-list-preview {
+    padding: 5px;
+    img {
+      display: block;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 15px;
+    }
+    .text {
+      display: -webkit-box;
+      -webkit-box-align: center;
+      p { margin-right: 10px;}
+    }
+  }
+}
+
+//<div class="order-list-preview">
+//<img src="http://wfx-s84664.s3.wx.fengxiaowang.com/gpic/20151201/4df086ecefa43be173d2ff846ce2f545.jpg?imageView2/2/w/600/h/600/interlace/1" />
+//<div class="text"><p>扫一扫，手机预览</p><div class="ui-btn ui-btn-c-1">PC预览</div></div>
+//</div>

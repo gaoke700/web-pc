@@ -1,0 +1,99 @@
+@import "../tools/variables";
+
+.page-tpl-list {
+  i, p, ul { padding: 0; margin: 0; }
+  .hd-top {
+    padding: 10px 0;
+    display: -webkit-box;
+    -webkit-box-align: center;
+
+    .btn-add-tpl {
+      background: $c5;
+      border-radius: 5px;
+      width:150px;
+      margin-right: 30px;
+      text-align: center;
+      line-height: 40px;
+      color: $c1;
+      font-size: 14px;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      i {
+        display: block;
+        margin-right: 10px;
+      }
+    }
+
+    .search-wrap {
+      background: $c6;
+      padding: 5px 6px;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      input::-webkit-input-placeholder{color: $c2;}
+      input {
+        display: block;
+        background: $c1;
+        border:1px solid $c2;
+        width:154px;
+        height: 20px;
+        line-height:20px;
+        padding: 4px 12px;
+        font-size: 12px;
+      }
+      .btn-search {
+        width: 58px;
+        line-height: 28px;
+        text-align: center;
+        border-radius: 5px;
+        margin-left: 5px;
+        background: $c7;
+        border:1px solid $c8;
+        cursor: pointer;
+        font-size:14px;
+        color: $c9;
+      }
+    }
+
+  }
+  .func {
+    background: $c6;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: start;
+    padding-left: 35px;
+    .btn-com {
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      margin-right: 24px;
+      cursor: pointer;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    span {
+      display: block;
+      color: $c10;
+    }
+    i {
+      display: block;
+      margin-right: 4px;
+    }
+  }
+  .state {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    p {
+      padding-right: 8px;
+    }
+    span {
+      cursor: pointer;
+      display: block;
+    }
+  }
+  .state-use {
+    span {}
+  }
+}

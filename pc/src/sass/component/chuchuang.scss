@@ -1,0 +1,50 @@
+@import "../tools/variables";
+
+.c-component-chuchuang {
+  &-style {
+    padding: 10px 25px 30px;
+  }
+  .chuchuang-wrap {
+    margin-top: 5px;
+    background:#f4f4f4;
+    border-radius:15px;
+    font-size: 0;
+    padding: 20px 8px;
+  }
+  .cc-item-wrap {
+    display: inline-block;
+    &:last-child {
+      .cc-item {
+        &:last-child {
+          & > div {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .cc-item {
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 4px solid #f4f4f4;
+    & > div {
+      padding: 0 8px;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      height: 36px;
+      margin: 8px 0;
+    }
+    &:last-child {
+      & > div {
+        border-right: 1px dashed #576369;
+      }
+    }
+    img {
+      display: block;
+    }
+    &-active {
+      border-bottom: 4px solid #E23F24;
+    }
+  }
+}

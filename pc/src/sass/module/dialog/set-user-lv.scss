@@ -1,0 +1,30 @@
+@import "../../tools/variables";
+@import "../../tools/mix";
+
+.g-dialog-set-user-lv {
+  font-size: 12px;
+  margin: 0 auto;
+  background: $c1;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  padding: 40px 0 0 0;
+  .set-lv-1 {
+    width: 160px;
+  }
+  .set-lv-1-text {
+    height: 90px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    text-align: center;
+  }
+  .set-lv-text {
+    font-size: 18px;
+    width: 90px;
+    line-height: 70px;
+    text-align: center;
+  }
+  .set-lv-bg { height: 70px; }
+  .set-lv-bg-1 { background: url("../images/page/member/user-list/set-lv-1.png") center no-repeat; }
+  .set-lv-bg-2 { background: url("../images/page/member/user-list/set-lv-2.png") center no-repeat; }
+}

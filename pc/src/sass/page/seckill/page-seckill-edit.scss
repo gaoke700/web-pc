@@ -1,0 +1,459 @@
+.isReturnMoney{
+    height:30px;
+    line-height:30px;
+}
+.black{
+    color:#576369;
+}
+.bg-grey{
+    background: #f5f5f5;
+}
+.default-color{
+    color:#576369;
+}
+.defaultW{
+    width: 100px;
+    display: inline-block;
+    text-align: right;
+}
+.moren{
+  flex: 1;
+}
+.page-seckill-edit{
+    .scoremall-top{
+        padding: 0;
+        border: none;
+        background: none;
+        p{
+            margin: 0;
+            font-size: 14px;
+            color: #e60012;
+        }
+    }
+    .viewshow{
+        background:grey;
+    }
+    #sec-kill{
+        font-size:15px;
+        color:#576369;
+    }
+    #sec-kill-from{
+        padding: 20px;
+    }
+    .sec-kill-title{
+        height:38px;
+        line-height:38px;
+        font-size:15px;
+        margin:50px 0 20px;
+        color: #3a3b40;
+        font-weight: bold;
+    }
+    .sec-kill-set{
+        background: #f5f5f5;
+    }
+    .sec-kill-set-head{
+
+    }
+    .dl{
+        display:-webkit-box;
+    }
+    .dt{
+        width:100px;
+        text-align:right;
+    }
+    .dd{
+        -webkit-box-flex:1;
+        text-align:left;
+        padding-left:50px;
+    }
+    .sec-kill-set-head .dt{
+        line-height:120px;
+    }
+    .sec-kill-set-head .dd{
+        padding:22px 0 0 17px;
+    }
+    .sec-kill-set-head .div{
+        display:-webkit-box;
+    }
+    .sec-kill-set-head .h2{
+        width:80px;
+        height:80px;
+        overflow:hidden;
+        background:#fff;
+    }
+    .sec-kill-set-head .h2 img{
+        width:100%;
+        height:100%;
+    }
+    .sec-kill-set-head .h3{
+        max-width:270px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        margin-left:14px;
+    }
+    .sec-kill-set-head .h4{
+        background:#0089ff;
+        border-radius:4px;
+        width:100px;
+        height:38px;
+        font-size:14px;
+        color:#ffffff;
+        text-align:center;
+        line-height:38px;
+        margin-top:10px;
+        margin-bottom:30px;
+    }
+    .sec-kill-set-price label{
+        margin:0 44px;
+    }
+    .sec-kill-set-price label.on{
+        color:#0089ff;
+    }
+    input[type="radio"]{
+        margin-right:12px;
+    }
+    input[type="radio"]:checked::before{
+        background-color:#0089ff;
+    }
+    input[type="radio"]:disabled::before{
+        background-color:#fff;
+    }
+    .sec-kill-set-price .bd{
+
+    }
+    .sec-kill-set-price .bd input{
+        background:#ffffff;
+        width:236px;
+        padding:0 10px;
+        height:29px;
+        line-height:29px;
+        border:1px solid #bbb;
+    }
+    .sec-kill-set-price .bd .title{
+        display:-webkit-box;
+    }
+    .sec-kill-set-price .bd .title-left{
+        width: 100px;
+        text-align: right;
+        line-height:30px;
+    }
+    .sec-kill-set-price .bd .body-main{
+        display:-webkit-box;
+        padding-top:10px;
+        line-height: 34px;
+        -webkit-box-align: center;
+    }
+    .sec-kill-set-price .bd .body-left{
+        //text-align: right;
+      display: flex;
+      width: 256px;
+    }
+    .sec-kill-set-price .bd .body-right{
+        -webkit-box-flex:1;
+        margin-left: 20px;
+    }
+    .sec-kill-set-price .bd .body-right small{
+        width:70px;
+        display:inline-block;
+        font-size:inherit;
+    }
+    .sec-kill-set-price .bd .body-right label{
+        margin:0;
+    }
+    .sec-kill-set-price .bd .body-right .sec-price{
+        margin-bottom:2px;
+    }
+    .sec-kill-set-price .bd .sec-price{
+        display:none;
+    }
+    .sec-kill-set-price .bd.on .sec-price{
+        display:block;
+    }
+    .sec-kill-set-price .bd.on .title{
+        display:none;
+    }
+    .sec-kill-set-price .ed{
+        text-align:center;
+    }
+    .sec-kill-active-main-box{
+        display:-webkit-box;
+        padding-bottom: 20px;
+    }
+    .sec-kill-active-left{
+        width:130px;
+        text-align:right;
+        margin-right:26px;
+        line-height:30px;
+    }
+    .sec-kill-active-right{
+        -webkit-box-flex:1;
+        display: -webkit-box;
+        .hint-box{
+            margin-left: 10px;
+        }
+    }
+    .sec-kill-active-right label.conw{
+        width:130px;
+        height:30px;
+        display:inline-block;
+        position:relative;
+        background: #ffffff;
+    }
+
+    .sec-kill-active-right label.conw input:disabled{
+        background:#fff;
+    }
+    .cancelTime{
+        vertical-align:middle;
+        width:130px;
+        height:30px;
+        line-height:30px;
+        position:relative;
+        z-index:10;
+        background:transparent;
+        padding:0;
+        text-indent:10px;
+    }
+    .cancelTime option{
+        height:30px;
+        line-height:30px;
+    }
+    .sanjiao{
+        position:absolute;
+        height:100%;
+        width:30px;
+        border-left:1px solid #ddd;
+        right:0;
+        top:0;
+    }
+    .sanjiao:after{
+        position:absolute;
+        content:"";
+        width:0;
+        height:0;
+        display:inline-block;
+        border:6px solid transparent;
+        border-top:10px solid #ddd;
+        top:50%;
+        margin-top:-5px;
+        right:50%;
+        margin-right:-6px;
+    }
+    .sec-kill-active-main.about-time .sec-kill-active-left{
+        line-height:30px;
+    }
+    .sec-kill-active-main.about-time .sec-kill-active-right{
+        -webkit-box-flex:0;
+        width:300px;
+    }
+    .sec-kill-active-main.about-time .sec-kill-active-right label.conw{
+        position:relative;
+        width:260px;
+    }
+    .sec-kill-active-main.about-time .sec-kill-active-right input{
+        width:260px;
+        height:30px;
+        line-height:30px;
+        padding:0;
+        text-indent:40px;
+        box-sizing:border-box;
+    }
+    .hint{
+        font-size:12px;
+        color:#9b9b9b;
+        padding-top:6px;
+        margin-right: 50px;
+    }
+    .hint img{
+        margin-right:4px;
+    }
+    .hint span{
+        color:#ec7d6a;
+        text-decoration:underline;
+        margin-left:4px;
+    }
+    .sec-kill-hint .hint{
+        display:inline-block;
+    }
+    .sec-kill-hint .hint span{
+        margin-right:4px;
+    }
+    .limit-radio{
+        height:30px;
+    }
+    .limit-radio label{
+        margin-right:40px;
+    }
+    .sec-kill-active .hint{
+        position:relative;
+    }
+    .sec-kill-active .hint div.hovers{
+        position:absolute;
+        right:-440px;
+        top:-40px;
+        z-index:12;
+        display:none;
+    }
+    .sec-kill-active .hint div.hovers.on{
+        display:block;
+    }
+    .sec-kill-des input{
+        width:600px;
+        height:30px;
+        line-height:30px;
+        margin-right:10px;
+    }
+    .sec-kill-money .bd{
+        border:1px solid #dddddd;
+        height:179px;
+        padding-top:18px;
+        width:620px;
+        padding-left:45px;
+        padding-right:45px;
+        margin-top:20px;
+        display:none;
+    }
+    .sec-kill-money .bd.on{
+        display:-webkit-box;
+    }
+    .sec-kill-money .bd .label{
+        display:inline-block;
+        margin-bottom:20px;
+    }
+    .sec-kill-money .bd .on .label{
+        color:#0089ff;
+    }
+    .isReturnMoney label:first-of-type{
+        margin-right:50px;
+    }
+    .isReturnMoney-left{
+        width:220px;
+        margin-right:20px;
+    }
+    .isReturnMoney-right{
+        -webkit-box-flex:1;
+    }
+    .isReturnMoney-right .isReturnMoney-box{
+        width:100%;
+    }
+    .scoremall-btn{
+        width:auto;
+        text-align:center;
+        font-size:20px;
+    }
+    .scoremall-btn>button{
+        font-size:16px;
+    }
+    .isReturnMoney-box{
+        background:#e0e0e0;
+        border:1px solid #eeeeee;
+        width:230px;
+        height:91px;
+        padding-top:27px;
+    }
+    .sec-kill-money .bd .on .isReturnMoney-box{
+        background:rgba(0,137,255,0.2);
+        border:1px solid #eee;
+    }
+    .sReturnMoney-box-main{
+        display:-webkit-box;
+        margin-bottom:10px;
+    }
+    .isReturnMoney-box-left{
+        width:150px;
+        text-indent:22px;
+        height:32px;
+        line-height:32px;
+    }
+    .isReturnMoney-box-right{
+        -webkit-box-flex:1;
+    }
+    .isReturnMoney-box-right input{
+        height:30px;
+        line-height:30px;
+        border:1px solid #ddd;
+        padding:0;
+    }
+    .isReturnMoney-left .isReturnMoney-box-right input{
+        width:50px;
+        text-align:center;
+    }
+    .isReturnMoney-right .isReturnMoney-box-right input{
+        width:190px;
+        text-indent:10px;
+    }
+    .limitNum-span{
+        display:none;
+    }
+    .limitNum{
+        margin-left:10px;
+        margin-right:6px;
+    }
+    .checkedLimitNum:checked ~ .limitNum-span{
+        display:inline-block;
+    }
+    .parent-input{
+        position:relative;
+        display:inline-block;
+    }
+    .parent-hint{
+        position:absolute;
+        display:none;
+        top:-43px;
+        left:0;
+        z-index:10;
+        height:30px;
+        line-height:30px;
+        padding:0 10px;
+        min-width:60px;
+        background:rgba(255, 111, 111, 0.6);
+        font-size:14px;
+        color:#fff;
+    }
+    .isReturnMoney-box-box.isReturnMoney-left .isReturnMoney-box .parent-hint{
+        left:-150px;
+    }
+    .isReturnMoney-box-box.isReturnMoney-right .isReturnMoney-box .parent-hint{
+        left:-100px;
+    }
+    .parent-hint.on{
+        display:inline-block;
+    }
+    .parent-hint:after{
+        content:"";
+        width:0;
+        height:0;
+        border:5px solid transparent;
+        border-top:10px solid rgba(255, 111, 111, 0.6);
+        position:absolute;
+        left:10px;
+        bottom:-15px;
+    }
+
+    .sec-kill-set-price{
+        .bd{
+
+        }
+        .hd{
+            padding-bottom: 10px;
+        }
+        .ed{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+
+    .price-box{
+        padding-left: 47px;
+    }
+    .moren{
+
+    }
+}
+.sec-kill-hint-msg {
+    margin-right:40px;
+}
+.page-seckill-edit .limit-radio label.minute {
+    margin-right:0px;
+}

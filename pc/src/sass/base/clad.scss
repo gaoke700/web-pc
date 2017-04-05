@@ -1,0 +1,10 @@
+.clad-tpl-preview {
+  width: 375px;
+  height: 600px;
+  overflow-y: auto;
+  img {
+    display: block;
+    width: 375px;
+    height: auto;
+  }
+}

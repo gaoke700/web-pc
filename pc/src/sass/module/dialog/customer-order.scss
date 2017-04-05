@@ -1,0 +1,36 @@
+@import "../../tools/variables";
+@import "../../tools/mix";
+
+//订单列表弹窗
+.g-dialog-tabs {
+  .contents {
+    padding: 20px;
+    line-height: 30px;
+    .none {
+      display: none;
+    }
+    //标题
+    .titles {
+      color: #0089ff;
+      margin-top: 12px;
+      border-bottom: 1px solid #e6e7ed;
+      span {
+        display: inline-block;
+        height: 100%;
+        border-bottom: 1px solid #0089ff;
+      }
+    }
+    .ellipsis1 {
+      @include ellipsis(1, 18px);
+    }
+    .refond-details {
+      span{
+        display: inline-block;
+        width: 40%;
+        &.left{
+          margin-right: 5%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,388 @@
+i, dl, p { margin: 0; padding: 0;}
+
+@import "../tools/variables";
+@import "../component/search";
+@import "../component/hd-banner";
+@import "../component/slider-img";
+@import "../component/store-header";
+@import "../component/product-list";
+@import "../component/chuchuang";
+@import "../component/nav-img";
+@import "../component/common";
+@import "../component/cutfigure";
+
+%r-func {
+  position: absolute;
+  right: -33px;
+  top: 2px;
+  .move-decoration, .btn-remove {
+    width: 30px;
+    border: 1px solid $c28;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+    background: $c27;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+  }
+  .move-decoration {
+    height: 40px;
+    margin-bottom: 5px;
+  }
+  .btn-remove {
+    height: 30px;
+    cursor: pointer;
+  }
+}
+.page-tpl-editor {
+  background: $c20;
+  padding-bottom: 70px;
+
+  .hd-top {
+    background:$c19;
+    width:100%;
+    padding: 25px 0 25px 60px;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-pack: start;
+    .input-wrap {
+      padding-right: 35px;
+      color: $c17;
+      .text1 {
+        display: inline-block;
+        padding-right: 5px;
+      }
+      & > div {
+        position: relative;
+        display: inline-block;
+      }
+      input {
+        display: block;
+        background: $c1;
+        border:1px solid $c2;
+        width:140px;
+        padding: 0 50px 0 5px;
+        line-height: 28px;
+        color: $c17;
+        &.des {
+          width: 240px;
+        }
+        &:disabled {
+          background: $c29;
+        }
+        &:focus {
+          box-shadow: 0 0 0 rgba(0,0,0,0);
+        }
+      }
+      .tip {
+        width: 150%;
+        position: absolute;
+        left: 0;
+        top: 30px;
+        font-size:10px;
+        color: $c16;
+        line-height: 15px;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        span {
+          display: block;
+        }
+      }
+      .t-error {
+        color:#e75c45;
+      }
+      .t-succ {
+        color:#24baab;
+      }
+      .num {
+        color:#838383;
+        text-align: right;
+        position: absolute;
+        right: 5px;
+        top: 0;
+        line-height: 32px;
+        span {
+          color: #404549;
+        }
+      }
+    }
+    .btn-ok {
+      width:98px;
+      height: 32px;
+      cursor: pointer;
+      display: -webkit-box;
+      -webkit-box-align: center;
+    }
+  }
+  .hd-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: $c18;
+    width:100%;
+    padding: 10px 0;
+    font-size:14px;
+    border-top: 1px solid $c19;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    z-index: 55;
+    .btn-save {
+      background: $c5;
+      border-radius:5px;
+      width:130px;
+      line-height:40px;
+      color: $c1;
+      text-align:center;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+    .btn-save-use {
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      cursor: pointer;
+      i {
+        display: block;
+        background: $c1;
+        border:1px solid $c5;
+        border-radius:4px;
+        width:13px;
+        height:13px;
+        margin-right: 5px;
+      }
+      span {
+        display: block;
+        color: $c5;
+      }
+    }
+  }
+  .hd-main {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: start;
+    .left-wrap {
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      width: 450px;
+      padding: 25px 10px 100px 0;
+      border-right: 2px dashed #f7efe2;
+    }
+    .right-wrap {
+      -webkit-box-flex: 1;
+      padding: 12px;
+    }
+    .preview-bg-wrap {
+      width: 450px;
+      height: 952px;
+      padding-bottom: 5px;
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      overflow-y: auto;
+      overflow-x: hidden;
+      &::-webkit-scrollbar { width: 5px; height: 5px }
+      &::-webkit-scrollbar-thumb { background-color: rgba(50,50,50,0.3) }
+      &::-webkit-scrollbar-thumb:hover { background-color: rgba(50,50,50,0.6) }
+      &::-webkit-scrollbar-track { background-color: rgba(50,50,50,0.1) }
+      &::-webkit-scrollbar-track:hover { background-color: rgba(50,50,50,0.2) }
+      &::-webkit-scrollbar { display:block;}
+    }
+    .preview-bg {
+      background: $c1;
+      width: 380px;
+      -webkit-box-shadow:0 0 3px rgba(0,0,0,0.5);
+    }
+    .preview-head {
+      text-align: center;
+      font-size: 14px;
+      line-height: 34px;
+      padding: 27px 0 4px;
+      color: $c1;
+      background: url(../../images/page-tpl-editor/preview-bg.jpg) center top no-repeat;
+    }
+    .preview-warp {
+      height: 886px;
+      position: relative;
+      //overflow-y: scroll;
+      //overflow-x: hidden;
+      //&::-webkit-scrollbar { width: 5px; height: 5px }
+      //&::-webkit-scrollbar-thumb { background-color: rgba(50,50,50,0.3) }
+      //&::-webkit-scrollbar-thumb:hover { background-color: rgba(50,50,50,0.6) }
+      //&::-webkit-scrollbar-track { background-color: rgba(50,50,50,0.1) }
+      //&::-webkit-scrollbar-track:hover { background-color: rgba(50,50,50,0.2) }
+      //&::-webkit-scrollbar { display:block;}
+      .placed-area {
+        background:rgba(231,91,69,.5);
+        border: 2px solid $c26;
+        height:80px;
+        text-align: center;
+        line-height: 80px;
+        font-size: 36px;
+        color: $c1;
+      }
+      .preview-item {
+        width: 376px;
+        height: 198px;
+        background:$c1;
+        border: 2px solid $c1;
+        cursor: move;
+        &.drag-ele {
+          position: fixed;
+          z-index: 5;
+          opacity: 0.8;
+        }
+        .wrap {
+          position: relative;
+          width: 376px;
+        }
+        .r-func {
+          display: none;
+          @extend %r-func;
+        }
+        .view {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 198px;
+          width: 376px;
+          z-index: 2;
+          display: -webkit-box;
+          -webkit-box-pack: center;
+          -webkit-box-align: center;
+          p {
+            background: rgba(86, 86, 86, 0.58);
+            border-radius:30px;
+            width:150px;
+            height:50px;
+            color: #fff;
+            font-size: 16px;
+            display: none;
+          }
+          span {
+            display: block;
+            padding-left: 6px;
+          }
+        }
+        iframe {
+          border: 0;
+          width: 100%;
+          height: 198px;
+        }
+
+        &-active, &:hover {
+          border: 2px solid $c26;
+          .r-func {
+            display: block;
+          }
+        }
+
+        &:hover {
+          .view {
+            background: rgba(231, 91, 69, 0.5);
+            p {
+              display: -webkit-box;
+              -webkit-box-pack: center;
+              -webkit-box-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .editor-wrap {
+      color: $c23;
+      .editor-title {
+        padding: 0 17px;
+        background: $c19;
+        margin: 0;
+        border-bottom: 1px solid $c21;
+        line-height: 40px;
+        font-size: 16px;
+        span {
+          font-size: 12px;
+        }
+      }
+
+      .drag-wrap {
+        display: -webkit-box;
+        margin-bottom: 12px;
+        dl {
+          background: $c1;
+          border-bottom: 1px solid $c24;
+          margin-right: 5px;
+          &:last-child {
+            margin-right: 0;
+            min-width: 158px;
+            -webkit-box-flex: 1;
+          }
+        }
+        dt {
+          background: $c29;
+          line-height: 44px;
+          font-size: 14px;
+          padding: 0 17px;
+        }
+        dd {
+          font-size: 0;
+          padding: 14px 0 0 6px;
+        }
+        .btn-drag {
+          display: inline-block;
+          margin: 0 6px 14px 0;
+          cursor: pointer;
+          span {
+            display: block;
+            width: 70px;
+            height: 72px;
+          }
+        }
+      }
+
+      .set-wrap {
+        margin-bottom: 12px;
+        background: $c1;
+        border-bottom: 1px solid $c24;
+        .set-title {
+          background: $c29;
+          line-height: 44px;
+          font-size: 16px;
+          padding: 0 17px;
+          position: relative;
+          .btn-save {
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            width:80px;
+            height:40px;
+            position: absolute;
+            right: 20px;
+            top: 2px;
+            cursor: pointer;
+          }
+        }
+        .set-text {
+          padding: 0 17px;
+          line-height: 41px;
+          font-size: 14px;
+        }
+        .component-default {
+          background: #fff;
+          border-bottom: 1px solid #ede6df;
+          font-size:18px;
+          color:#2d2d2d;
+          line-height:30px;
+          p {
+            display: -webkit-box;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+            height:300px;
+            span {
+              display: block;
+              padding-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

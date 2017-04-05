@@ -1,0 +1,19 @@
+@import "../../tools/variables";
+.page-shop-decoration-list{
+    padding: 20px;
+    .page-shop-decoration-lis-header{
+        display: -webkit-box;
+        -webkit-box-pack: justify;
+        -webkit-box-align: center;
+        margin-bottom: 20px;
+        a{
+            color: inherit;
+        }
+    }
+    .page-new-temp{
+        a{
+            color: inherit;
+            display: block;
+        }
+    }
+}

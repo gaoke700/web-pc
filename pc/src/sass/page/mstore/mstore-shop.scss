@@ -1,0 +1,64 @@
+//  设置小程序    
+    .set-little-pro{
+        margin: 0 30px;
+        border-bottom:1px solid #dddddd;
+        width:calc(100% - 60px);
+        font-size:16px;
+        color:#4f5458;
+        line-height: 40px;
+    }
+//  未开通小程序
+    .no-open{
+        background:#fafbfc;
+        border:1px solid #eeeeee;
+        width:619px;
+        height:290px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        .logo{
+            width: 60px;
+            height: 60px;
+            align-self: center;
+            margin-right: 30px;
+        }
+        .infos{
+            text-align: left;
+            display: inline-block;
+            align-self: center;
+            line-height: 40px;
+            h3{
+                font-size:22px;
+                color:#333333;
+            }
+            p{
+                font-size:13px;
+                color:#333333;
+            }
+            .price{
+                span{
+                    font-size: 13px;
+                    color: #9e9f9f;
+                }
+                i{
+                    font-size:17px;
+                    color:#ff0200; 
+                }
+                b{
+                    font-weight: normal;
+                    font-size:13px;
+                    color:#333333;
+                }
+            }
+            .buy-now{
+                display: inline-block;
+                background:#e75c45;
+                text-align: center;
+                border-radius:5px;
+                width:120px;
+                height:40px;
+                line-height:40px;
+                color: #fff;
+            }
+        }
+    }
