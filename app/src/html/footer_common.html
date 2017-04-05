@@ -1,0 +1,209 @@
+{# if footer_params.indexFlag == 1 then #}
+<!--版权-->
+<div class="g-copyright"><div class="g-copyright-logo"><a href="http://myunqi.shopex.cn/products/wsc"><img inline src="images/details/yunqi-logo.png"></a></div></div>
+{# end #}
+
+{# if footer_params.close_menu == false then #}
+<!--footer-->
+<footer class="g-footer-nav fix-dom {# if (0==footer_params.is_seller_open or footer_params.openstore_type=='hidden' or footer_params.openstore_type=='hidden') then #} four-column {# end #}">
+  <ul>
+              {# if footer_params.cur == 'index' then #}
+                <li><a href="{# echo(theme_config.webroot) #}index.html"><span><em><img inline src="images/footer/footer-home-on.svg" alt=""></em><i>首页</i></span></a></li>
+              {# else #}
+                <li><a href="{# echo(theme_config.webroot) #}index.html"><span><em><img inline src="images/footer/footer-home.svg" alt=""></em><i>首页</i></span></a></li>
+              {# end #}
+    {# if  1==footer_params.is_seller_open  then #}
+    {# if footer_params.openstore_type=='hidden' then #}
+      <li><a href="{# echo(theme_config.webroot) #}?carts-index.html"><span><b class="shopping-num"></b><em><img inline src="images/footer/icon-shopping.svg" alt=""></em><i>购物车</i></span></a></li>
+    {# else #}
+    {# if footer_params.global_member_type == 1 then #}
+              {# if footer_params.cur=='store' then #}
+                <li><a href="{# echo(theme_config.webroot) #}?member-storeManage.html"><span><em><img inline src="images/footer/footer-manage-on.svg" alt=""></em><i>店铺管理</i></span></a></li>
+              {# else #}
+                <li><a href="{# echo(theme_config.webroot) #}?member-storeManage.html"><span><em><img inline src="images/footer/footer-manage.svg" alt=""></em><i>店铺管理</i></span></a></li>
+              {#end#}
+    {# else #}
+              {# if footer_params.cur=='openStore' then #}
+                <li class="open-store"><a><span><em><img inline src="images/footer/footer-distribution-on.svg" alt=""></em><i>我要开店</i></span></a></li>
+              {# else #}
+                <li class="open-store"><a><span><em><img inline src="images/footer/footer-distribution.svg" alt=""></em><i>我要开店</i></span></a></li>
+              {#end#}
+
+    {# end #}
+    {# end #}
+    {# else #}
+        <li><a href="{# echo(theme_config.webroot) #}?carts-index.html"><span><b class="shopping-num"></b><em><img inline src="images/footer/icon-shopping.svg" alt=""></em><i>购物车</i></span></a></li>
+    {# end #}
+
+        <li   {# if (0==footer_params.is_seller_open or footer_params.openstore_type=='hidden') then #} style="display:none;" {#end#}><a href="{# echo(theme_config.webroot) #}?carts.html"><span><em><img inline src="images/footer/footer-shopping.png" alt=""></em></span></a></li>
+
+        <li data-set="{# echo(params.custom_service.state) #}" data-url="{# echo(params.custom_service.url) #}" class="customer-server"><a href="javascript:;"><span><em><img inline src="images/footer/footer-customer.jpg" alt=""></em><i>客服</i></span></a></li>
+
+                      {#if footer_params.cur=='member' then #}
+                      <li><a href="{# echo(theme_config.webroot) #}?member.html"><span><em><img inline src="images/footer/footer-mine-on.svg" alt=""></em><i>我的</i></span></a></li>
+                      {#else#}
+                      <li><a href="{# echo(theme_config.webroot) #}?member.html"><span><em><img inline src="images/footer/footer-mine.jpg" alt=""></em><i>我的</i></span></a></li>
+                      {#end#}
+
+
+  </ul>
+</footer>
+{# end #}
+
+{# if footer_params.show_wx_share then #}
+<!--是否开启微信分享模式-->
+<div style="display:none;" id="data-wx">{"wx_title":"{# echo(footer_params.wxData.wx_title) #}","wx_desc":"{# echo(footer_params.wxData.wx_desc) #}","wx_imgUrl":"{# echo(footer_params.wxData.wx_imgUrl) #}","wx_link":"{# echo(footer_params.wxData.wx_link) #}","wx_appid":"{# echo(footer_params.wxData.wx_appid) #}","timestamp":"{# echo(footer_params.wxData.timestamp) #}","nonceStr":"{# echo(footer_params.wxData.noncestr) #}","signature":"{# echo(footer_params.wxData.signature) #}","url":"{# echo(theme_config.webroot) #}?default-share_count.html"}</div>
+{# end #}
+
+{# if theme_config.wx_code ~= nil then #}
+  <script type="text/javascript">
+    var data = 'ajax=1';
+    var xhr = new XMLHttpRequest();        //创建一个ajax对象
+    xhr.onreadystatechange = function(event){    //对ajax对象进行监听
+        if(xhr.readyState == 4){    //4表示解析完毕
+            if(xhr.status == 200){    //200为正常返回
+                window.location.href = xhr.responseText;
+            }
+        }
+    };
+    xhr.open('POST','assist.php?act=wx_login&code={# echo(theme_config.wx_code)#}&request_uri={# echo(params.request_uri) #}',true);
+    xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+    xhr.send(data);
+  </script>
+{# end #}
+
+<input type="hidden" id="isShowLogo" value="{# echo(footer_params.indexFlag) #}">
+
+{# if footer_params.show_wx_share then #}
+<!--是否开启微信分享模式-->
+  <div style="display:none;" id="data-wx">{"wx_title":"{# echo(footer_params.wxData.wx_title) #}","wx_desc":"{# echo(footer_params.wxData.wx_desc) #}","wx_imgUrl":"{# echo(footer_params.wxData.wx_imgUrl) #}","wx_link":"{# echo(footer_params.wxData.wx_link) #}","wx_appid":"{# echo(footer_params.wxData.wx_appid) #}","timestamp":"{# echo(footer_params.wxData.timestamp) #}","nonceStr":"{# echo(footer_params.wxData.noncestr) #}","signature":"{# echo(footer_params.wxData.signature) #}","url":"{# echo(theme_config.webroot) #}?default-share_count.html"}</div>
+{# end #}
+
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/base.js"></script>
+<!--#import js/config.js #source-->
+<script>
+    /*
+     * 注意：
+     * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+     * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+     * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+     *
+     * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+     * 邮箱地址：weixin-open@qq.com
+     * 邮件主题：【微信JS-SDK反馈】具体问题
+     * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+     */
+    wx.config({
+        debug: false,
+        appId: '<{$wxData.wx_appid}>',
+        timestamp: '<{$wxData.timestamp}>',
+        nonceStr: '<{$wxData.noncestr}>',
+        signature: '<{$wxData.signature}>',
+        jsApiList: [
+            'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo',
+            'onMenuShareQZone',
+            'hideMenuItems',
+            'showMenuItems',
+            'hideAllNonBaseMenuItem',
+            'showAllNonBaseMenuItem',
+            'translateVoice',
+            'startRecord',
+            'stopRecord',
+            'onVoiceRecordEnd',
+            'playVoice',
+            'onVoicePlayEnd',
+            'pauseVoice',
+            'stopVoice',
+            'uploadVoice',
+            'downloadVoice',
+            'chooseImage',
+            'previewImage',
+            'uploadImage',
+            'downloadImage',
+            'getNetworkType',
+            'openLocation',
+            'getLocation',
+            'hideOptionMenu',
+            'showOptionMenu',
+            'closeWindow',
+            'scanQRCode',
+            'chooseWXPay',
+            'openProductSpecificView',
+            'addCard',
+            'chooseCard',
+            'openCard'
+        ]
+    });
+    wx.ready(function(){
+        var wx_title  = '<{$wxData.wx_title}>',
+                wx_desc   = '<{$wxData.wx_desc}>',
+                wx_imgUrl = '<{$wxData.wx_imgUrl}>',
+                wx_link   = '<{$wxData.wx_link}>',
+                wx_dataUrl   = '<{link ctl="default" act="share_count"}>';
+        wx.onMenuShareAppMessage({
+            title: wx_title,
+            desc: wx_desc,
+            link: wx_link,
+            imgUrl: wx_imgUrl,
+            success: function () {
+                wxCallback();
+            }
+        });
+        // 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
+        wx.onMenuShareTimeline({
+            title: wx_title,
+            link: wx_link,
+            imgUrl: wx_imgUrl,
+            success: function () {
+                wxCallback();
+            }
+        });
+        // 2.3 监听“分享到QQ”按钮点击、自定义分享内容及分享结果接口
+        wx.onMenuShareQQ({
+            title: wx_title,
+            desc: wx_desc,
+            link: wx_link,
+            imgUrl: wx_imgUrl,
+            success: function () {
+                wxCallback();
+            }
+        });
+        // 2.4 监听“分享到微博”按钮点击、自定义分享内容及分享结果接口
+        wx.onMenuShareWeibo({
+            title: wx_title,
+            desc: wx_desc,
+            link: wx_link,
+            imgUrl: wx_imgUrl,
+            success: function () {
+                wxCallback();
+            }
+        });
+    });
+
+    var wxCallbackJson = {
+        share_count: function(){
+            // var url = dataWX.url;
+            var url = '<{link ctl="default" act="share_count"}>';
+            var params = {};
+            $.ajax({
+                url:url,
+                type:'post',
+                success:function(res){
+                    console.log(res);
+                }
+            });
+        }
+    };
+    function wxCallback(){
+        for(var i in wxCallbackJson){ //i表示属性，wxCallbackJson表示对象，此for循环就是遍历对象上的属性
+            wxCallbackJson[i]();
+        }
+    }
+
+    var tmp = {# echo(footer_params.global_member_type) #}
+</script>

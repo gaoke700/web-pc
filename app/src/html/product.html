@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<!--引入 header_common.html start-->
+		{# theme.include('standard/header_common.html', {header_params = params.header, theme_config=theme_config}, params.theme_dir) #}
+		<!--引入 header_common.html end-->
+        <link rel="stylesheet" inline href="css/page/details/details-first.css">
+		<link rel="stylesheet" href="css/page/details/details.css">
+    </head>
+    <body>
+        <div class="page-details w375">
+			{# theme.include('standard/pc_preview_common.html', {params = params}, params.theme_dir) #}
+			<!--头部切换-->
+            <div class="details-header fix-dom">
+				<div class="details-tabs">
+					<div class="logo"><a href="{# echo(params.siteUrl) #}"><span class="icons-store-logo icons"></span></a></div>
+                    <ul class="tab">
+                        <li class="product-info can-active"><a href="javascript:;" class="active">商品</a></li>
+                        <li class="product-details can-active"><a href="#hashxiangqing">详情</a></li>
+                        <li class="comments can-active"><a href="javascript:;">评价</a></li>
+                    </ul>
+					<div class="mine js-my">
+						<a class='js-in-mine'>我的
+							<b class="red-point {#if params.member_notice.carts==false and params.member_notice.favorites==false and params.member_notice.shoppingRecord==false then #}none{# end #}"></b>
+						</a>
+					</div>
+				</div>
+				<div class="details-mine none">
+					<div class="triangle"></div>
+					<ul>
+						<li class="cart">
+							<a href="{# echo(theme_config.webroot) #}?carts-index.html">
+								<span class="icons-gouwuche icons"></span>
+								<i class="js-dian-carts">我的购物车
+									<b class="red-point {#if params.member_notice.carts==false then #}none{# end #}"></b>
+								</i>
+							</a>
+						</li>
+						<li class="collect">
+							<a href="{# echo(theme_config.webroot) #}?member-myFavorites.html">
+								<span class="icons-collect-star icons"></span>
+								<i class="js-dian-favorites">我的收藏
+									<b class="red-point {#if params.member_notice.favorites==false then #}none{# end #}"></b>
+								</i>
+							</a>
+						</li>
+						<li class="record">
+							<a href="{# echo(theme_config.webroot) #}?member-shoppingRecord.html">
+								<span class="icons-gouwujilu icons"></span>
+								<i class="js-dian-shoppingRecord">购物记录
+									<b class="red-point {#if params.member_notice.shoppingRecord==false then #}none{# end #}"></b>
+								</i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+            <!--商品信息-->
+            <div class="goods-info operate-none" goods-id="{# echo(params.goods_id)#}" act-id="{# echo(params.act_id)#}">
+            	<!--轮播-->
+	            <div class="tabBox">
+	                <div id="TabBoxImg" class="TabBoxImg">
+						<div class="bd">
+							<ul>
+								{# for k,v in pairs(params.arr_pic) do #}
+                                    {# if k == 1 then #}
+										<li><img class="lazy-load" data-src="{# echo(v) #}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUCB1jYAACAAAFAAGNu5vzAAAAAElFTkSuQmCC" /></li>
+                                    {# else #}
+                                    	<li><img class="lazy-load" data-src="{# echo(v) #}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUCB1jYAACAAAFAAGNu5vzAAAAAElFTkSuQmCC" /></li>
+                                    {# end #}
+								{# end #}
+							</ul>
+						</div>
+	                	<div class="hd none"><ul></ul></div>
+	                	<i class="pageState"></i>
+	                </div>
+	            </div>
+				<!--秒杀信息在此，js动态添加-->
+	            <!--商品信息-->
+	            <div class="goods-message">
+	                <h2>{# echo(params.title) #}</h2>
+	                <div class="price">
+						{# if params.is_group then #}
+						<span><small class="none vipPrice">拼团价</small>&yen;<big>{# echo(params.group_data.act_price) #}</big></span>
+						{# else #}
+						<span><small class="none vipPrice">会员价</small>&yen;<big>{# echo(params.price) #}</big></span>
+	                	{# end #}
+						<article>
+		                	<i>&yen;{# echo(params.gprices) #}</i>
+		                	{# if params.is_group then #}
+							<b>{# echo(params.group_data.person_num) #}人团省{# echo(params.group_data.economizeMoney) #}元</b>
+							{# end #}
+	                	</article>
+	                	<em class="none">运费  ￥<b>18</b>元</em>
+	                </div>
+	                <!-- <div class="freight">运费 &yen;10~50元</div> -->
+	                <div class="has-sale">
+	                    <span>已售卖<em>{# if params.statistics_sales then #} {# echo(params.statistics_sales) #} {# else #} 0 {# end #}</em>笔</span>
+	                    <i>{# if params.statistics_pv then #} {# echo(params.statistics_pv) #} {# else #} 0 {# end #}人想买</i>
+	                </div>
+	                {# if ('table' == type(params.goods_couponArr) and  (true~=params.is_group) ) then #}
+	                <div class="tickets">
+	                    <div class="title">领券</div>
+	                    <div class="content">
+	                    {# for _,v in pairs(params.goods_couponArr) do #}
+	                        <i>{# echo(v['price']) #}元优惠券</i>
+	                    {# end #}
+	                    </div>
+	                    <span class="icons icons-three-point"></span>
+	                </div>
+	                {# end #}
+	            {# if params.mj_flage == 1 or params.paygift then #}
+	                <!-- {# if 'table' == type(params.couponArr) then #}
+	                <div class="tickets">
+	                    <div class="title">领券</div>
+	                    {# for _,v in pairs(params.couponArr) do #}
+	                    <div class="content">
+	                        <i>满{# echo(v['conf']) #}送{# echo(v['coupon']) #}</i>
+	                    </div>
+	                    {# end #}
+	                    <span class="icons icons-gengduo"></span>
+	                </div>
+	                {# end #} -->
+	                {# if params.pinkageArr > 0 or params.scoreArr ~= 0 or params.paygift then #}
+	                <div class="promotion">
+	                    <div class="title">促销</div>
+	                    <ul class="content">
+							{# if 'table' == type(params.minusMoneyArr) then #}
+							<li class="reduced-send on"><span>满减送</span>
+							    <p>
+								{# for _,v in pairs(params.minusMoneyArr) do #}
+								 <i>满{# echo(v['conf']) #}元减{# echo(v['favourable']) #}元</i>
+							    {# end #}
+							   </p>
+							</li>
+							{# end #}
+
+							{# if 'table' == type(params.couponArr) then #}
+							<li class="reduced-preferential"><span>优惠券</span>
+							    <p>
+								 {# for _,v in pairs(params.couponArr) do #}
+								  <i>满{# echo(v['conf']) #}送{# echo(v['coupon']) #}元优惠券</i>
+								 {# end #}
+								 </p>
+							{# end #}
+
+	                        {# if params.pinkageArr > 0 then #}
+	                        <li><span>包邮</span>
+	                        	<p><i>满{# echo(params.pinkageArr) #}元包邮</i></p>
+	                        </li>
+	                        {# end #}
+
+	                        {# if 'table' == type(params.scoreArr) then #}
+	                        <li>
+	                            <span>积分</span>
+	                            <p>{# for _,v in pairs(params.scoreArr) do #}
+	                            <i>满{# echo(v['conf']) #}送{# echo(v['score']) #}积分</i>
+	                            {# end #}</p>
+	                        </li>
+	                        {# end #}
+	                        {# if params.paygift then #}
+	                        <li>
+	                            <span>支付有礼</span>
+	                            <p><i>{# if params.paygift.payed ~= 0 then #}满<i>{# echo(params.paygift.payed) #}</i>元送礼{# else #}支付有奖{# end #}</i></p>
+	                            
+	                        </li>
+	                        {# end #}
+	                    </ul>
+	                    <span class="icons icons-three-point"></span>
+	                </div>
+	                {# end #}
+	            {# end #}
+	            </div>
+				{# if params.is_group then #}
+				<!-- 拼团玩法 -->
+				<input class="wang-group-limit-num" type="hidden" value="{# echo(params.group_data.limit_buy_num)#}" />
+				<input class="wang-group-team-id" type="hidden" value="{# echo(params.group_data.group_team_id)#}" />
+				<section class="bg group">
+					<header>拼团玩法</header>
+					<p>1.支付并开团，分享给好友邀请参团;<br />2.有效时间内凑齐人数，即可拼团成功;<br />3.有效期内人数不足，则拼团失败，钱款将自动退回。</p>
+	            </section>
+				{# end #}
+	            <!-- 支付方式 -->
+	            <section class="bg payment">
+	            	{# if params.is_weixin then #}
+	                <b>
+	                	<img inline src="images/orderConfirm/order-confirm-weixin.png" />
+                	</b>
+                	<em>微信支付</em>
+	                {# else #}
+	                <b>
+	                	<img inline src="images/orderConfirm/order-confirm-alipay.png" />
+                	</b>
+                	<em>支付宝支付</em>
+	                {# end #}
+	            </section>
+	            <!--选择规格-->
+	            <div class="select-standard">
+	                <div class="title">已选</div>
+	                <div class="content">
+						{# if params.is_group then #}
+						默认规格
+						{# else #}
+						选择规格
+						{# end #}
+	                </div>
+					{# if true~=params.is_group then #}
+					<span class="icons icons-three-point"></span>
+					{# end #}
+				</div>
+	            <!--门店选择-->
+	            {# if params.open_muiltstore == 1 then #}
+	            <div class="muilt-store-select store-style re-write">
+	            	<!-- <a href="{# echo(theme_config.webroot) #}?orders-store_list.html&redirect_url=product-{# echo(params.goods_id)#}.html"> -->
+					<a onclick="window.location.href=('{# echo(theme_config.webroot) #}?member-storeList.html&mode=order&redirect_url=' + encodeURIComponent(window.location.href));" href="javascript:;">
+		                <span class="icons icons-weizhi"></span><i>门店</i><strong>当前尚未选择门店</strong>
+		                <span class="icons icons-gengduo"></span>
+	            	</a>
+	            </div>
+                {# end #}
+	            <!--评价-->
+	            <div class="product-comments">
+	                <div class="product-comments-header">
+	                    <span>评价(<b>0</b>)</span><i>更多</i>
+	                </div>
+	                <!--评论列表在此-->
+	                
+	            </div>
+	            <!--门店信息-->
+	            <div class="muilt-store-message">
+	                <div class="muilt-store-header">
+	                    <div class="about-store">
+	                         <img class="lazy-load" data-src="{# echo(params.site_logo) #}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUCB1jYAACAAAFAAGNu5vzAAAAAElFTkSuQmCC" />
+	                         <div class="about-name">
+	                            <h3 class="store-name">
+                                    {# echo(params.distributor_store_name) #}
+                                </h3>
+                                <p class="introduction">
+                                    {# echo(params.shop_introduce) #}
+	                            </p>
+	                         </div>
+	                    </div>
+	                    <ul class="about-num">
+	                        <li>
+	                            <p>{# if params.memberNum then #} {# echo(params.memberNum) #} {# else #} 0 {# end #}</p>
+	                            <p>到店人数</p>
+	                        </li>
+	                        <li>
+	                            <p>{# echo(params.goodsNum) #}</p>
+	                            <p>全部商品</p>
+	                        </li>
+	                        <li>
+	                            <p>{# echo(params.goodsDynamic) #}</p>
+	                            <p>店铺动态</p>
+	                        </li>
+	                    </ul>
+	                </div>
+	                <div class="muilt-btns">
+	                    <div class="contact-store">
+	                        <span class="icons icons-customer"></span><i>联系店家</i>
+	                    </div>
+	                    <div class="enter-store">
+                            <a href="{# echo(params.siteUrl) #}">
+                                <span class="icons icons-store"></span><i>进入店铺</i>
+                            </a>
+	                    </div>
+	                </div>
+                    {# if params.open_muiltstore == 1 then #}
+	                <div class="muilt-store-call store-style re-write">
+	                    <span class="icons icons-weizhi"></span><strong>当前尚未选择门店</strong>
+	                    <a class="phone"><span class="icons icons-dianhua"></span></a>
+	                </div>
+	                <!-- <div class="business-hours store-style">
+	                    <span class="icons icons-shijian"></span><i>营业时间</i><strong>10:00 ~ 23:00</strong>
+	                </div> -->
+	                <div class="other-muilt-store store-style">
+	            		<!-- <a href="{# echo(theme_config.webroot) #}?orders-store_list.html&redirect_url=product-{# echo(params.goods_id)#}.html"> -->
+						<a onclick="window.location.href=('{# echo(theme_config.webroot) #}?member-storeList.html&mode=order&redirect_url=' + encodeURIComponent(window.location.href));" href="javascript:;">
+		                   <span class="icons icons-weizhi"></span><strong>其他<b>{# echo(params.countStores) #}</b>家门店</strong>
+		                   <span class="icons icons-gengduo"></span>
+		                </a>
+	                </div>
+                    {# end #}
+	            </div>
+				<!--商品详情-->
+				<div class="goods-details" id="hashxiangqing">
+					<div class="goods-details-header">商品详情</div>
+					<div class="goods-details-content" style="font-size:0.3rem;"><!--解决ios字体缩小问题。。这里的字体大小不要去掉-->
+
+					</div>
+				</div>
+            </div>
+
+            <!--评论页-->
+            <div class="goods-comments operate-none none"></div>
+            
+            <!--底部按钮-->
+        	<div class="bottom-btns fix-dom">
+				<div class="btns-custom {# if params.show_gifts then #}impor{# end #}">
+					<span class="btns-f icons icons-customer"></span>客服
+				</div>
+
+                <div class="btns-store {# if params.show_gifts then #}impor{# end #}">
+                    <a href="{# echo(params.siteUrl) #}">
+                       <span class="btns-f icons icons-store"></span>店铺
+                    </a>
+                </div>
+
+				<div class="btns-collect {# if params.show_gifts then #}impor{# end #}">
+                        <span class="btns-f icons icons-collect-star {# if params.is_fav then #}has-collect{# end #}"></span>收藏
+				</div>
+
+				{# if (params.show_gifts and  params.is_group==false) then #}
+					{# if (params.goods_store==0 or (params.secKill and params.secKill.act_status=='running')) then #}
+					    <!-- <div class="btns-gifts impor none"><span class="icons icons-liwu"></span><br/>送礼物</div> -->
+					{# else #}
+				       <div class="btns-gifts impor"><span class="btns-f icons icons-liwu"></span>送礼物</div>
+				    {# end #}
+				{# end #}
+				{# if params.is_group then #}
+				<!-- 拼团btn -->
+				{# if params.group_data.group_team_id ~= nil then #}
+					<a class="group-btns-join" href="{# echo(theme_config.webroot) #}?groups-{# echo(params.group_data.group_team_id) #}-index.html">&yen;{# echo(params.group_data.act_price) #}<br />去参团</a>
+				{# else #}
+					<div class="group-btns-onekey">&yen;{# echo(params.group_data.act_price) #}<br />一键开团</div>
+				{# end #}
+				<div class="group-btns-singlebuy">&yen;{# echo(params.price) #}<br />单独购买</div>
+				{# else #}
+				<div class="btns-buynow {# if params.show_gifts then #}impor{# end #}">立即购买</div>
+				<div class="btns-cart {# if params.show_gifts then #}impor{# end #}">加入购物车</div>
+				{# end #}
+				<!-- 秒杀 -->
+		        {# if params.goodsType=='secKill' then #}
+				    {# if params.goods_store==0 then #}
+				{# else #}
+					{# if params.secKill.act_status=='running' then #}<div class="rush-now">马上抢</div>{# end #}
+					{# if params.secKill.act_status=='beginning' then #}<div class="will-start has-set-remind {# if params.show_gifts then #}impor{# end #}">秒杀<br/>即将开始</div>{# end #}
+					{# if params.secKill.act_status=='preheat' and params.secKill.need_remind==1 then #}
+						{# if params.secKill.is_remind==0 then #}
+							<div class="set-remind {# if params.show_gifts then #}impor{# end #}" >提醒我</div>
+							<div class="none has-set-remind {# if params.show_gifts then #}impor{# end #}">开抢前<br/>{#echo (params.secKill.remind_time)#}分钟提醒</div>
+						{# else #}
+							<div class="has-set-remind {# if params.show_gifts then #}impor{# end #}">开抢前<br/>{#echo (params.secKill.remind_time)#}分钟提醒</div>
+						{# end #}
+					{# end #}
+
+				{# end #}
+
+		        {# end #}
+			</div>
+        </div>
+
+		<!--引入 footer_common.html start-->
+		{# theme.include('standard/footer_common.html', {footer_params = params.footer, theme_config=theme_config, params = params}, params.theme_dir) #}
+		<!--引入 footer_common.html end-->
+		<script>
+            $(document).ready(function(){
+                seajs.use(['js/page/details/details.js'], function(index){
+                    index.init();
+                });
+            });
+		</script>
+    </body>
+</html>
