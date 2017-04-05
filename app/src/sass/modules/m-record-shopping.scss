@@ -1,0 +1,150 @@
+//我的记录里的商品
+@import "../tools/mix";
+@import "m-shopping";
+.m-record-shopping{
+    $color1:#333333;
+    $color2:#ededed;
+    $color3:#ffffff;
+    $color11:#fc152e;
+    $color12:#2ba79e;
+    $color13:#328be5;
+    $color14:#fd7933;
+    $color15:#333333;
+    $color16:#ffe7e7;
+    .p15{
+        padding:0 px2rem(15);
+        position:relative;
+    }
+    a{
+        text-decoration:none;
+        outline:none;
+        color:inherit;
+        -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+        display:inline-block;
+        width:100%;
+        height:100%;
+    }
+    img{
+        width:100%;
+        height:100%;
+    }
+    .m-record-shopping-header{
+        background:$color3;
+        height:px2rem(40);
+        line-height:px2rem(40);
+        font-size:px2rem(13);
+        color:$color1;
+        @extend .p15;
+        .m-record-shopping-header-store{
+            position:absolute;
+            top:0;
+            left:px2rem(15);
+            span{
+                vertical-align:middle;
+            }
+        }
+        .m-record-shopping-store-logo{
+            width:px2rem(26);
+            height:px2rem(26);
+        }
+        .m-record-shopping-header-status{
+            position:absolute;
+            right:px2rem(15);
+            top:0;
+            color: #333;
+        }
+        .m-record-shopping-header-more{
+            position:absolute;
+            top:0;
+            right:px2rem(75);
+            color:$color11;
+        }
+        .m-record-shopping-header-more-list{
+            position:absolute;
+            width:px2rem(70);
+            left:50%;
+            margin-left:- px2rem(35);
+            top:px2rem(34);
+            z-index:2;
+            text-align:center;
+            display:none;
+            &:after{
+                content:'';
+                position:absolute;
+                top:- px2rem(3);
+                left:50%;
+                margin-left:- px2rem(3);
+                width:px2rem(6);
+                height:px2rem(6);
+                background:$color16;
+                border-top:1px solid $color11;
+                border-left:1px solid $color11;
+                transform:rotate(45deg);
+            }
+            &.m-record-shopping-header-more-list-show{
+                display:block;
+            }
+        }
+        .m-record-shopping-header-more-btn{
+            height:px2rem(30);
+            line-height:px2rem(30);
+            background:$color16;
+            color:$color11;
+            border:px2rem(1) solid currentColor;
+            border-radius:5px;
+        }
+    }
+    .m-record-shopping-content{
+        background:$color2;
+        @extend .p15;
+    }
+    .m-record-shopping-footer{
+        background:$color3;
+        @extend .p15;
+        height:px2rem(40);
+        line-height:px2rem(40);
+        font-size:px2rem(13);
+        color:$color1;
+        .m-record-shopping-footer-money{
+            position:absolute;
+            right:px2rem(15);
+            top:0;
+        }
+    }
+    //订单状态
+//  &.m-record-shopping-status0{
+//      .m-record-shopping-header{
+//          .m-record-shopping-header-status{
+//              color:$color11;
+//          }
+//      }
+//  }
+//  &.m-record-shopping-status1{
+//      .m-record-shopping-header{
+//          .m-record-shopping-header-status{
+//              color:$color12;
+//          }
+//      }
+//  }
+//  &.m-record-shopping-status2{
+//      .m-record-shopping-header{
+//          .m-record-shopping-header-status{
+//              color:$color13;
+//          }
+//      }
+//  }
+//  &.m-record-shopping-status3{
+//      .m-record-shopping-header{
+//          .m-record-shopping-header-status{
+//              color:$color14;
+//          }
+//      }
+//  }
+//  &.m-record-shopping-status4{
+//      .m-record-shopping-header{
+//          .m-record-shopping-header-status{
+//              color:$color15;
+//          }
+//      }
+//  }
+}

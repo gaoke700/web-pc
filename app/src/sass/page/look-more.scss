@@ -1,0 +1,7 @@
+@import "../tools/mix";
+@import "../modules/m-product";
+@import "../modules/m-search";
+@import "../modules/m-loading-bottom";
+.product-main{
+    @include clear-fix;
+}

@@ -1,0 +1,67 @@
+@import "../../tools/mix";
+.muiltstore-yj-info {
+  background: #fff;
+  padding: 0 px2rem(20);
+  .color1 { color:#2ec4d8;}
+  .color2 { color:#ee3400;}
+  &-list {
+    display: -webkit-box;
+    line-height: px2rem(30);
+    .text {
+      width: px2rem(70);
+      text-align: right;
+    }
+    .content {
+      -webkit-box-flex: 1;
+    }
+    &-status {
+      line-height: px2rem(50);
+      border-bottom: 1px solid #d9d9d9;
+      margin-bottom: px2rem(10);
+    }
+    .goods-wrap {
+      .goods-list {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        line-height: px2rem(20);
+        border-bottom: 1px solid #ddd;
+        padding: px2rem(10) 0;
+      }
+      .img1 {
+        display: block;
+        width: px2rem(60);
+        height: px2rem(60);
+        border-radius: px2rem(5);
+      }
+      .xinxi {
+        -webkit-box-flex: 1;
+        &-list {
+          display: -webkit-box;
+          -webkit-box-align: center;
+          -webkit-box-pack: justify;
+          color: #959595;
+          font-size: px2rem(12);
+          padding-left: px2rem(15);
+        }
+        .name {
+          color: #4b4b4b;
+          -webkit-box-flex: 1;
+          @include ellipsis2(1, px2rem(20));
+        }
+        .price {
+          color:#e7213a;
+          -webkit-box-flex: 1;
+          span { font-size: px2rem(14); }
+        }
+        .good-status {
+          background:#ffe7e7;
+          border-radius:px2rem(2);
+          padding: 0 px2rem(5);
+          color: #ee3400;
+          margin-left: px2rem(15);
+          border: 1px solid #ee3400;
+        }
+      }
+    }
+  }
+}

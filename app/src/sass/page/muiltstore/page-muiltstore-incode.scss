@@ -1,0 +1,150 @@
+@import "../../tools/mix";
+html, body {
+  background: #F8F8F8;
+}
+.page-muiltstore-incode {
+  font-size: px2rem(14);
+  @import "./muiltstore-yj-info";
+  .menu {
+    display: -webkit-box;
+    &-list {
+      width: px2rem(20);
+      height: px2rem(39);
+      line-height: px2rem(39);
+      border-bottom: 1px solid #ddd;
+    }
+    .btn-menu {
+      -webkit-box-flex: 1;
+      text-align: center;
+    }
+    .active {
+      border-bottom: 1px solid #EE3400;
+      color: #EE3400;
+    }
+  }
+  .bottom-yjjl {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #F8F8F8;
+    a {
+      display: block;
+      border-top: 1px solid #EE3400;
+      margin: 0 px2rem(15);
+      font-size: px2rem(16);
+      color: #EE3400;
+      line-height: px2rem(54);
+      text-align: center;
+    }
+  }
+  .main {
+    .shuoming {
+      padding: px2rem(20) 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  .yz-status {
+    text-align: center;
+    font-size: px2rem(18);
+    line-height: px2rem(24);
+    padding-top: px2rem(280);
+    background: url("images/muiltstore/succ.png") center px2rem(80) no-repeat;
+    background-size: px2rem(195) auto;
+    .text {
+      line-height: px2rem(20);
+      padding-bottom: px2rem(25);
+    }
+  }
+  .yz-status-sm {
+    background: url("images/muiltstore/smyj.png") center px2rem(80) no-repeat;
+    background-size: px2rem(195) auto;
+  }
+  .btn {
+    display: block;
+    background:#ee3400;
+    border-radius: px2rem(100);
+    width: px2rem(220);
+    height: px2rem(42);
+    text-align: center;
+    color: #fff;
+    font-size: px2rem(16);
+    line-height: px2rem(42);
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    input {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: px2rem(220);
+      height: px2rem(42);
+      opacity: 0;
+    }
+  }
+  .sdyj {
+    .input-wrap {
+      margin: px2rem(20) px2rem(25) 0;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      background: #fff;
+      input {
+        -webkit-box-flex: 1;
+        display: block;
+        border: 0;
+        box-sizing: border-box;
+        line-height: px2rem(24);
+        height: px2rem(24);
+        font-size: px2rem(18);
+        padding: px2rem(12) px2rem(10);
+        text-align: center;
+      }
+      span {
+        display: block;
+        width: px2rem(100);
+        height: px2rem(50);
+        line-height: px2rem(50);
+        background: #ee3400;
+        text-align: center;
+        font-size: px2rem(16);
+        color: #fff;
+      }
+    }
+  }
+  .yj-result {
+    .jy-info {
+      margin-top: px2rem(10);
+      padding-bottom: px2rem(70);
+      .btn-wrap {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        background: #F8F8F8;
+        padding: px2rem(10) 0;
+        border-top: 1px solid #ddd;
+        .btn1 {
+          display: block;
+          background:#ee3400;
+          border-radius: px2rem(10);
+          width: px2rem(130);
+          line-height: px2rem(40);
+          text-align: center;
+          font-size: px2rem(16);
+          color: #fff;
+          margin-right: px2rem(30);
+          &:last-child { margin-right: 0;}
+        }
+        .btnfh {
+          background:#ffe7e7;
+          border:1px solid #f68d72;
+          color: #ee3400;
+        }
+      }
+    }
+  }
+}

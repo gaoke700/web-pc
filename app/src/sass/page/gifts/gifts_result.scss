@@ -1,0 +1,83 @@
+@import "gifts_get";
+html{
+    background:#fff4e1;
+    overflow-x:hidden;
+}
+.page{
+    padding-bottom:px2rem(160);
+}
+.main-header{
+    background:#fffbf2;
+    padding-bottom:px2rem(20);
+}
+
+.address{
+    width:px2rem(350);
+    margin:px2rem(16) auto 0;
+    border:px2rem(3) dashed #f5d180;
+    border-radius:px2rem(6);
+    .address-content{
+        background:rgba(255,255,255,0.6);
+        height:100%;
+        padding:px2rem(10);
+    }
+    .address-select{
+        padding-top:px2rem(10);
+
+
+
+    }
+    .address-select-name{
+        display:-webkit-box;
+        -webkit-box-pack: justify;
+        height:px2rem(26);
+        line-height:px2rem(26);
+        color:#4f4f4e;
+        font-size:px2rem(16);
+        overflow:hidden;
+        margin-bottom:px2rem(6);
+    }
+    .address-select-name-des{
+        width:px2rem(185);
+        overflow:hidden;
+    }
+    .address-select-name-tel{
+
+    }
+    .address-select{
+        position:relative;
+        .icons{
+            position:absolute;
+            right:- px2rem(6);
+            top:50%;
+            font-size:px2rem(24);
+            margin-top:- px2rem(12);
+        }
+        padding-right:px2rem(14);
+    }
+    .address-select-address{
+        color:#888888;
+        height:px2rem(16);
+        line-height:px2rem(16);
+        overflow:hidden;
+        font-size:px2rem(14);
+        padding-bottom:px2rem(18);
+        position:relative;
+    }
+    .address-language{
+        padding-top:px2rem(10);
+        border-top:1px solid #ece7d8;
+        label{
+            display:inline-block;
+            width:100%;
+        }
+        input{
+            border:none;
+            outline:none;
+            background:none;
+            font-size:inherit;
+            width:px2rem(280);
+            padding:px2rem(10) 0;
+        }
+    }
+}

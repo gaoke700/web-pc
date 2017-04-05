@@ -1,0 +1,15 @@
+@import "../tools/mix";
+.c-component-CutFigure{
+  .cutFigure-wrap {
+    position: relative;
+    img {
+      display: block;
+      max-height:none;
+      max-width:none;
+    }
+    a {
+      display: block;
+      position: absolute;
+    }
+  }
+}

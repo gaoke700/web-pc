@@ -1,0 +1,53 @@
+//秒杀聚合页
+@import "../tools/mix";
+@import "../modules/m-product";
+@import "../modules/m-no-data";
+@import "../modules/m-loading-bottom";
+html,body{
+    overflow-x: hidden;
+}
+.page{
+    .main-header-tab{
+        display:-webkit-box;
+        .main-header-btn{
+            height:px2rem(50);
+            line-height:px2rem(50);
+            -webkit-box-pack:center;
+            -webkit-box-flex:1;
+            display:-webkit-box;
+            position:relative;
+            background:#333333;
+            color:rgba(255,255,255,0.8);
+            font-size:px2rem(18);
+            &.main-header-btn-on{
+                background:#e10000;
+                color:#ffffff;
+                &:after{
+                    content:'';
+                    display:inline-block;
+                    position:absolute;
+                    width:0;
+                    height:0;
+                    border:px2rem(10) solid transparent;
+                    border-top-color:#e10000;
+                    right:50%;
+                    margin-right:- px2rem(5);
+                    top: px2rem(48);
+                }
+            }
+        }
+        .icons{
+            font-size:px2rem(30);
+            width:px2rem(40);
+            text-align: center;
+        }
+    }
+    .main-banner{
+        height:px2rem(96);
+        background:#ccc;
+        margin:px2rem(20) 0;
+    }
+    .main-container{
+        @include clear-fix();
+    }
+}

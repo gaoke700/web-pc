@@ -1,0 +1,25 @@
+@import "../../tools/mix";
+html, body {
+  background: #6f61e9;
+}
+.page-shavecard-info {
+  background: url("images/shavecard/guige.png") top center no-repeat;
+  background-size: contain;
+  .content {
+    padding: px2rem(200) px2rem(35) 0;
+    h2 {
+      margin-bottom: px2rem(30);
+      line-height: px2rem(50);
+      font-size: px2rem(16);
+      color: #fff;
+      border-bottom: px2rem(2) solid #867ae8;
+      text-align: center;
+    }
+    ul {
+      font-size: px2rem(12);
+      color:#faeec2;
+      line-height: px2rem(24);
+    }
+    li {}
+  }
+}

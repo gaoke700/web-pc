@@ -1,0 +1,168 @@
+@import "../tools/mix";
+.c-component-search{
+    span.icons{
+        font-size: inherit;
+    }
+    .wrap{
+        display:-webkit-box;
+        -webkit-box-align:center;
+        padding:0 px2rem(12);
+    }
+    .category,.cart{
+        width:px2rem(28);
+        height:px2rem(28);
+        font-size:px2rem(28);
+    }
+    .cart{
+        display:block;
+        color:inherit;
+    }
+    .search{
+        margin:0 px2rem(15);
+        -webkit-box-flex:1;
+        color:#8b8b8b;
+        font-size:px2rem(12);
+    }
+
+    .search-1{
+        border:1px solid #9f9f9f;
+        border-radius:px2rem(100);
+        height:px2rem(33);
+        display:-webkit-box;
+        -webkit-box-align:center;
+        -webkit-box-pack:center;
+        i{
+            display:block;
+            width:px2rem(18);
+            height:px2rem(18);
+            margin-right:px2rem(20);
+            font-size:px2rem(18);
+
+        }
+        span{
+            display:block;
+            font-size:px2rem(14);
+        }
+    }
+
+    .search-2{
+        display:-webkit-box;
+        -webkit-box-align:center;
+        height:px2rem(44);
+        position:relative;
+        span{
+            display:block;
+            -webkit-box-flex:1;
+            margin-right:px2rem(6);
+            border:1px solid #9f9f9f;
+            border-radius:px2rem(100);
+            line-height:px2rem(33);
+            padding-left:px2rem(35);
+            box-sizing:border-box;
+        }
+        i{
+            position:absolute;
+            right:0;
+            top:0;
+            display:block;
+            background:#9a9999;
+            width:px2rem(44);
+            height:px2rem(44);
+            border-radius:50%;
+            font-size:px2rem(30);
+            text-align:center;
+            line-height:px2rem(44);
+            color:#ffffff;
+        }
+    }
+
+    .search-3{
+        display:-webkit-box;
+        -webkit-box-align:center;
+        height:px2rem(36);
+        background:#f0f0f0;
+        border-radius:px2rem(8);
+        padding:0 px2rem(6);
+        em{
+            background:#9a9999;
+            border-radius:px2rem(8);
+            width:px2rem(45);
+            line-height:px2rem(27);
+            color:#fff;
+            font-size:px2rem(14);
+            display:block;
+            text-align:center;
+        }
+        span{
+            display:block;
+            padding-left:px2rem(8);
+            box-sizing:border-box;
+            margin:0 px2rem(6);
+            background:#ffffff;
+            border-radius:px2rem(8);
+            line-height:px2rem(31);
+            -webkit-box-flex:1;
+        }
+        i{
+            display:block;
+            width:px2rem(18);
+            height:px2rem(18);
+            font-size:px2rem(18);
+        }
+    }
+
+    .search-4{
+        display:-webkit-box;
+        -webkit-box-align:center;
+        -webkit-box-pack:center;
+        span{
+            display:block;
+            -webkit-box-flex:1;
+            margin-right:px2rem(6);
+            border:1px solid #9f9f9f;
+            border-radius:px2rem(100);
+            line-height:px2rem(33);
+            padding-left:px2rem(35);
+            box-sizing:border-box;
+        }
+        i{
+            display:block;
+            background:#9a9999;
+            border:1px solid #9a9999;
+            border-radius:px2rem(100);
+            width:px2rem(60);
+            line-height:px2rem(33);
+            color:#fff;
+            font-size:px2rem(14);
+            font-style:normal;
+            text-align:center;
+        }
+    }
+
+    .search-5{
+        display:-webkit-box;
+        -webkit-box-align:center;
+        -webkit-box-pack:center;
+        span{
+            display:block;
+            -webkit-box-flex:1;
+            margin-right:px2rem(6);
+            border:1px solid #9f9f9f;
+            border-radius:px2rem(100);
+            line-height:px2rem(33);
+            padding-left:px2rem(35);
+            box-sizing:border-box;
+        }
+        i{
+            display:block;
+            background:#9a9999;
+            width:px2rem(34);
+            height:px2rem(34);
+            border-radius:50%;
+            font-size:px2rem(24);
+            text-align:center;
+            line-height:px2rem(34);
+            color:#ffffff;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import "../tools/mix";
+
+.c-component-sliderImg{
+  .wrap {
+
+  }
+  .sliderImg {
+    position:relative;
+    overflow:hidden;
+    .bd{
+      text-align:center;
+      height:px2rem(230);
+      overflow:hidden;
+      a{
+        display:block;
+        height:px2rem(230);
+      }
+      li{
+        text-align:center;
+        overflow:hidden;
+        img{
+          width:100%;
+          height:100%;
+        }
+        a:after{
+          @include sham();
+        }
+      }
+    }
+    .hd{
+      position:absolute;
+      width:100%;
+      left:0;
+      bottom:8px;
+      text-align:center;
+      li{
+        display:inline-block;
+        width:px2rem(5);
+        height:px2rem(5);
+        margin:px2rem(4);
+        background:#ffffff;
+        border-radius:50%;
+        border:1px solid #fff;
+        &.on{
+          background:#f98144;
+        }
+      }
+    }
+  }
+}

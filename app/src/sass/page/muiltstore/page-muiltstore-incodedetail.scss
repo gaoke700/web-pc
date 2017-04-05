@@ -1,0 +1,8 @@
+@import "../../tools/mix";
+html, body {
+  background: #F8F8F8;
+}
+.page-muiltstore-incodedetail {
+  font-size: px2rem(14);
+  @import "./muiltstore-yj-info";
+}

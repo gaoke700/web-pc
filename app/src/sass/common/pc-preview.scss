@@ -1,0 +1,94 @@
+@import "../tools/mix";
+@import "../tools/variables";
+@mixin pc-fix{
+  .fix-dom {
+    width: 540px !important;
+    left: 50% !important;
+    margin-left: -270px !important;
+  }
+  .fix-dom-t50 {
+    top: 70px;
+  }
+}
+.pc {
+  background: #f5f5f5;
+  padding-top: 40px;
+  height: 100%;
+  box-sizing: border-box;
+  body {
+    min-height: 100%;
+    width: 540px;
+    margin: 0 auto;
+    background: #fff;
+  }
+  @include pc-fix();
+  .pc-preview-t {
+    width: 100%; position: fixed; left: 0; top: 0; z-index: 9999;
+    height: 40px;
+    background: #f5f5f5;
+    .head {
+      text-align: center;
+      color: #fff;
+      line-height: 40px;
+      font-size: 14px;
+      background: -webkit-linear-gradient(top, #333333 0%,#121312 100%);
+      .logo-wrap {
+        position: fixed;
+        height: 40px;
+        left: 20px;
+        top: 0;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        .logo { color: #fe313c; padding-right: 5px; font-size: 20px;}
+        .text {
+          width: 90px; height: 18px;
+          background: url("images/common/pc-preview-logo.png");
+        }
+      }
+    }
+  }
+  @include pc-fix();
+  .pc-preview-r {
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    margin-left: 300px;
+    top: 0;
+    width: 190px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    height: 100%;
+    .store-name {
+      display: -webkit-box;
+      -webkit-box-align: center;
+      font-size: 14px;
+      padding-bottom: 20px;
+      img {
+        display: block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      p {
+        -webkit-box-flex: 1;
+        padding-left: 8px;
+        color: #2b72da;
+      }
+    }
+    .erweima {
+      //box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+      border: 1px solid #e5e5e5;
+      background: #fff;
+      padding: 20px 20px 0;
+      line-height: 48px;
+      font-size: 12px;
+      text-align: center;
+      img {
+        display: block;
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+}

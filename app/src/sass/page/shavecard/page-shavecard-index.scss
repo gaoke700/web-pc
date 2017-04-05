@@ -1,0 +1,296 @@
+@import "../../tools/mix";
+
+html, body {
+  background: #7481ee;
+}
+.page-shavecard-index {
+  background: url("images/shavecard/index.png") top center no-repeat;
+  background-size: contain;
+  color: #fff;
+  padding-top: px2rem(10);
+  .zj-list {
+    background:rgba(65,22,136,0.66);
+    border-radius: px2rem(100);
+    width: px2rem(330);
+    height: px2rem(20);
+    margin: 0 auto;
+    padding-left: px2rem(7);
+    display: -webkit-box;
+    -webkit-box-align: center;
+    .laba {
+      width: px2rem(16);
+      height: px2rem(16);
+      margin-right: px2rem(10);
+      background: url("images/shavecard/laba.png") center no-repeat;
+      background-size: contain;
+    }
+    .text-wrap {
+      -webkit-box-flex: 1;
+      overflow: hidden;
+    }
+    .text-wrap2 {
+      width: 40000%;
+      font-size: 0;
+      ul {
+        display: inline-block;
+        vertical-align: top;
+        line-height: px2rem(20);
+        font-size: 0;
+        li {
+          display: inline-block;
+          vertical-align: top;
+          font-size: px2rem(12);
+          padding-right: px2rem(10);
+          padding-left: px2rem(18);
+          background: url("images/shavecard/user.png") center left no-repeat;
+          background-size: px2rem(14) auto;
+        }
+      }
+    }
+  }
+
+  .guiz {
+    padding-top: px2rem(80);
+    padding-bottom: px2rem(190);
+    display: -webkit-box;
+    -webkit-box-pack: end;
+    a {
+      display: block;
+      padding: 0 px2rem(5);
+      background: #E0E0E0;
+      color: #590298;
+      border-radius: px2rem(8) 0 0 px2rem(8);
+      line-height: px2rem(20);
+    }
+  }
+
+  .no-ongoing {
+    .gj-wrap {
+      width: px2rem(330);
+      height: px2rem(120);
+      background: url("images/shavecard/3.png") top center no-repeat;
+      background-size: contain;
+      color: #9b9b9b;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding-left: px2rem(105);
+      line-height: px2rem(24);
+      &.gj-wrap-1 {
+        background: url("images/shavecard/1.png") top center no-repeat;
+        background-size: contain;
+        color: #fff;
+      }
+      &.gj-wrap-2 {
+        background: url("images/shavecard/2.png") top center no-repeat;
+        background-size: contain;
+        color:#ffe100;
+      }
+    }
+    .time {
+      text-align: center;
+      line-height: px2rem(30);
+      padding-bottom: px2rem(65);
+      span { color: #fce707;}
+    }
+    .fix-btn {
+      display: block;
+      border:1px solid #fce707;
+      border-radius: px2rem(38);
+      text-align: center;
+      margin: 0 px2rem(65);
+      line-height: px2rem(38);
+      font-size: px2rem(16);
+      color: #fff;
+    }
+  }
+
+  .ongoing {
+    width: px2rem(330);
+    margin: 0 auto;
+    &-top {
+      height: px2rem(26);
+      line-height: px2rem(26);
+      padding-left: px2rem(105);
+      background: url("images/shavecard/ongoing-bg-1.png") top center no-repeat;
+      background-size: contain;
+      color: #ffe100;
+    }
+
+    &-tip {
+      background:#4135ad;
+      width: px2rem(330);
+      line-height: px2rem(30);
+      text-align: center;
+      margin: px2rem(15) auto 0;
+      span {
+        padding: 0 px2rem(5);
+        color: #FF9D1D;
+      }
+    }
+
+    &-content {
+      display: -webkit-box;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      height: px2rem(95);
+      font-size: px2rem(20);
+      line-height: px2rem(24);
+      color: #b56e33;
+      text-align: center;
+      position: relative;
+      background: url("images/shavecard/ongoing-bg-3.png") top center no-repeat;
+      background-size: contain;
+      &-no {
+        background: url("images/shavecard/ongoing-bg-2.png") top center no-repeat;
+        background-size: contain;
+      }
+      .canvas-wrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: px2rem(95);
+        transition: .5s opacity;
+        //background: rgba(0,0,0,0.5);
+      }
+      &-jl {
+        .jx-text {
+          text-align: center;
+          font-size: px2rem(20);
+          color: #ee3400;
+          line-height: px2rem(24);
+          padding-bottom: px2rem(10);
+          span {color: #b56e33;}
+        }
+        .btn {
+          background:#ee3400;
+          border-radius: px2rem(5);
+          width: px2rem(118);
+          line-height: px2rem(30);
+          text-align: center;
+          color: #fff;
+          font-size: px2rem(14);
+          margin: 0 auto;
+        }
+        .btn2 {
+          background: #fc9a07;
+        }
+      }
+    }
+  }
+}
+
+.page-shavecard-index-dialog1 {
+  width: px2rem(224);
+  height: px2rem(145);
+  text-align: center;
+  padding-top: px2rem(15);
+  .p1 {
+    line-height: px2rem(20);
+    font-size: px2rem(14);
+    color:#b56e33;
+    padding-bottom: px2rem(20);
+  }
+  .name {
+    color:#7f8285;
+    font-size: px2rem(12);
+    width: px2rem(200);
+    margin: 0 auto;
+    @include ellipsis2(1, px2rem(16));
+  }
+  .img {
+    width: px2rem(72);
+    height: px2rem(70);
+    margin: px2rem(12) auto 0;
+    &-hy {
+      background: url("images/shavecard/erroor-hy.png") top center no-repeat;
+      background-size: px2rem(72) auto;
+    }
+    &-jf {
+      background: url("images/shavecard/erroor-jf.png") top center no-repeat;
+      background-size: px2rem(53) auto;
+    }
+    &-num {
+      background: url("images/shavecard/erroor-num.png") top center no-repeat;
+      background-size: px2rem(64) auto;
+    }
+  }
+}
+
+.page-shavecard-index-dialog2 {
+  width: px2rem(224);
+  text-align: center;
+  padding-top: px2rem(15);
+  padding-bottom: px2rem(15);
+  color: #7f8285;
+  .p1 {
+    line-height: px2rem(20);
+    font-size: px2rem(14);
+    padding-bottom: px2rem(20);
+    color:#fa0321;
+  }
+  .jf-wrap {
+    .name {
+      color:#7f8285;
+      font-size: px2rem(12);
+      width: px2rem(200);
+      margin: 0 auto;
+      @include ellipsis2(1, px2rem(16));
+    }
+    .jf-num {
+      padding-top: px2rem(15);
+      padding-bottom: px2rem(14);
+      line-height: px2rem(20);
+      color:#fc5300;
+      text-align:center;
+      span {
+        font-size: px2rem(20);
+        padding-right: px2rem(3);
+      }
+    }
+    .text {
+      width: px2rem(172);
+      line-height: px2rem(16);
+      margin: 0 auto;
+      text-align: left;
+    }
+  }
+  .hyk-wrap {
+    background:#fef3e9;
+    width: px2rem(104);
+    height: px2rem(65);
+    padding: px2rem(2) px2rem(5) 0;
+    margin: 0 auto;
+    background: url("images/shavecard/hyk-bg.png") center no-repeat;
+    background-size: contain;
+    p {
+      font-size: px2rem(12);
+      color:#e58b33;
+      text-align:center;
+      @include ellipsis2(1, px2rem(24));
+    }
+  }
+  .yhj-wrap {
+    line-height: px2rem(16);
+    .tj { text-align: left; padding-left: px2rem(20);}
+    .num-wrap {
+      width: px2rem(80);
+      height: px2rem(57);
+      padding: px2rem(10) px2rem(10) 0 px2rem(25);
+      color:#00a6a1;
+      margin: 0 auto px2rem(10);
+      background: url("images/shavecard/yhj-bg.png") center no-repeat;
+      background-size: contain;
+      .name {
+        @include ellipsis2(1, px2rem(14));
+      }
+      .num {
+        padding-top: px2rem(8);
+        line-height: px2rem(22);
+        span {
+          font-size: px2rem(22);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+//我的记录之购物记录
+@import "../tools/mix";
+@import "../modules/m-record-tab";
+@import "../modules/m-record-shopping";
+@import "../modules/m-no-data";
+@import "../modules/m-loading-bottom";
+html{
+    background:#f4f4f4;
+}
+.page-record{
+    span,label{
+        display:inline-block;
+    }
+    img{
+        width:100%;
+        height:100%;
+    }
+    .main-record-tab,.m-record-shopping{
+        margin-bottom:px2rem(10);
+    }
+}

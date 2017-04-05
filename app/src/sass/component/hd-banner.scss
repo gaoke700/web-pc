@@ -1,0 +1,17 @@
+@import "../tools/mix";
+
+.c-component-hdBanner {
+  .wrap {
+  }
+  .hdBanner {
+    display: block;
+    overflow:hidden;
+    img {
+      display: block;
+      max-width:none;
+      max-height:none;
+    }
+    &.hdBanner-2 {
+    }
+  }
+}

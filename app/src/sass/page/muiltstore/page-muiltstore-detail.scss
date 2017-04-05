@@ -1,0 +1,57 @@
+@import "../../tools/mix";
+html, body {
+  background: #F8F8F8;
+}
+.page-muiltstore-detail {
+  font-size: px2rem(14);
+  .top-bg {
+    width: 100%;
+    height: px2rem(150);
+    background: url("images/muiltstore/store-bg.png") center no-repeat;
+    background-size: cover;
+  }
+
+  .info-wrap { padding-bottom: px2rem(10);}
+  .info-item {
+    margin-bottom: px2rem(10);
+    border-bottom: 1px solid #d9d9d9;
+    background: #fff;
+  }
+  .info-content {
+    padding: px2rem(14) px2rem(41) px2rem(14) px2rem(25);
+    line-height: px2rem(18);
+    font-size:px2rem(12);
+    display: -webkit-box;
+    -webkit-box-pack: start;
+    -webkit-box-align: start;
+    position: relative;
+    .d1 {}
+    .d2 {
+      color:#7f8285;
+      -webkit-box-flex: 1;
+      padding-right: px2rem(15);
+    }
+    .addr-text {
+      //@include ellipsis2(2, px2rem(18));
+    }
+    .d3 {
+      width: px2rem(16);
+      height: px2rem(20);
+      position: absolute;
+      right: px2rem(25);
+      top: 50%;
+      margin-top: px2rem(-10);
+    }
+    .i-phone {
+      background: url("images/muiltstore/phone.png") center no-repeat;
+      background-size: px2rem(16) auto;
+    }
+    .i-position {
+      background: url("images/muiltstore/position.png") center no-repeat;
+      background-size: auto px2rem(19);
+    }
+
+  }
+
+
+}

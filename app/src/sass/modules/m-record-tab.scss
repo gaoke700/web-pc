@@ -1,0 +1,30 @@
+//我的记录里的商品
+@import "../tools/mix";
+.m-record-tab{
+    $color1:#fc1521;
+    $color2:#888888;
+    $color3:#ffffff;
+    display:-webkit-box;
+    height:px2rem(40);
+    line-height:px2rem(40);
+    text-align:center;
+    background:$color3;
+    font-size:px2rem(14);
+    a{
+        text-decoration:none;
+        outline:none;
+        color:inherit;
+        -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+        display:inline-block;
+        width:100%;
+        height:100%;
+    }
+    &-btn{
+        -webkit-box-flex:1;
+        color:$color2;
+        &-on{
+            color:$color1;
+            border-bottom:2px solid $color1;
+        }
+    }
+}

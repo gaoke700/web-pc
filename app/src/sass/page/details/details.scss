@@ -1,0 +1,236 @@
+@import "../../tools/mix";
+@import "../../tools/variables";
+@import "../../common/comments-list.scss";
+
+$page-red: $color1;
+$page-orange: $color13;
+$page-adge: p2m(30);
+$deep-color: $color2;
+$light-color: $color7;
+$nomal-fontsize: p2m(26);
+$bt: 1px solid #ddd;
+
+html,body{
+    overflow-x: hidden;
+}
+.pc{
+  .page-details{
+    .details-header{
+      top: 40px;
+    }
+  }
+}
+
+.page-details {
+  padding: px2rem(46) 0 0 0;
+  //商品信息
+  .goods-info {
+    background: #f0f2f5;
+    .icons-three-point, .icons-dianhua, .icons-gengduo {
+      float: right;
+      font-size: p2m(30);
+      color: #aaa;
+      margin: 0 p2m(2) 0 0;
+      flex: 1;
+      text-align: right;
+    }
+    .store-style {
+      background: #fff;
+      padding: $page-adge;
+      font-size: $nomal-fontsize;
+      a {
+        display: inline-block;
+        width: 100%;
+        &.phone {
+          width: auto;
+          float: right;
+          .icons-dianhua {
+            font-size: p2m(30);
+            color: $page-orange;
+          }
+        }
+      }
+      .icons-weizhi, .icons-shijian {
+        color: $page-orange;
+      }
+
+      i {
+        color: $page-orange;
+        margin: 0 0 0 p2m(10);
+      }
+      strong {
+        color: $deep-color;
+        margin: 0 0 0 p2m(20);
+      }
+      small {
+        color: $light-color;
+        margin: 0 0 0 p2m(20);
+      }
+    }
+    //  信息页评论
+    .product-comments {
+      background: #fff;
+      padding: $page-adge;
+      margin: p2m(20) 0 0 0;
+      .product-comments-header {
+        font-size: $nomal-fontsize;
+        overflow: hidden;
+        span {
+          color: $light-color;
+        }
+        i {
+          color: $page-orange;
+          float: right;
+        }
+      }
+
+    }
+    //  门店信息
+    .muilt-store-message {
+      margin: p2m(20) 0 0 0;
+      background: #fff;
+      .about-store {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        padding: p2m(30) p2m(50);
+        img {
+          width: p2m(150);
+          height: p2m(150);
+          border-radius: 66%;
+        }
+        .about-name {
+          -webkit-box-flex: 1;
+          padding-left: p2m(20);
+          .store-name {
+            font-size: p2m(32);
+            color: $deep-color;
+          }
+          .introduction {
+            padding-top: p2m(20);
+            font-size: $nomal-fontsize;
+            color: $light-color;
+            @include ellipsis();
+          }
+        }
+      }
+      .about-num {
+        display: -webkit-box;
+        padding-bottom: p2m(40);
+        li {
+          -webkit-box-flex: 1;
+          width: 1%;
+          text-align: center;
+          p {
+            color: $deep-color;
+            display: block;
+            font-size: p2m(40);
+          }
+          p:last-child {
+            padding-top: p2m(12);
+            color: $light-color;
+            font-size: $nomal-fontsize;
+          }
+        }
+      }
+      .muilt-btns {
+        @include clear-fix();
+        div {
+          float: left;
+          width: 50%;
+          box-sizing: border-box;
+          border-top: 1px solid #e0e0e0;
+          border-bottom: 1px solid #e0e0e0;
+          text-align: center;
+          font-size: p2m(30);
+          padding: p2m(36) 0;
+          color: $deep-color;
+          &:first-of-type {
+            border-right: 1px solid #e0e0e0;
+          }
+          i {
+            margin: 0 0 0 p2m(20);
+          }
+          a {
+            color: $deep-color;
+          }
+        }
+      }
+      .muilt-store-call {
+        border-bottom: $bt;
+        span, strong, a {
+          &.no-muilt {
+            color: $light-color;
+          }
+        }
+
+      }
+      .business-hours {
+        border-bottom: $bt;
+        i {
+          margin: 0 0 0 p2m(20);
+        }
+      }
+    }
+    //  商品详情
+    .goods-details {
+      margin: $page-adge 0;
+      padding: $page-adge 0 0 0;
+      background: #fff;
+      overflow: hidden;
+      .goods-details-header {
+        margin: 0 0 $page-adge 0;
+        padding: 0 0 0 $page-adge;
+        font-size: $nomal-fontsize;
+        color: $light-color;
+      }
+          .goods-details-content{
+              margin: 0 0 $page-adge 0;
+              div{
+                  width: auto !important;
+              }
+              img{
+                  display: block;
+                  width: 10rem !important;
+                  height: auto !important;
+                  max-width: none!important;
+              }
+          }
+
+    }
+  }
+
+  //评论
+  .goods-comments {
+    padding: 0 $page-adge;
+  }
+
+}
+
+//查看优惠活动
+.dialog-promotion {
+  padding: 0 p2m(30);
+  height: 10.6667rem;
+  overflow-y: auto;
+  .content {
+    li {
+      padding: p2m(20) 0;
+      display: -webkit-box;
+      border-bottom: 1px solid #ddd;
+      span {
+        color: $page-orange;
+        border: 1px solid $page-orange;
+        border-radius: p2m(5);
+        padding: p2m(4) p2m(8);
+        margin: 0 p2m(20) 0 0;
+      }
+      p {
+        width: 80%;
+        i {
+          color: $deep-color;
+          margin-right: p2m(4);
+        }
+      }
+
+    }
+  }
+}

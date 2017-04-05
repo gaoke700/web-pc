@@ -1,0 +1,74 @@
+//375的设计稿
+@function px2rem($px) {
+  @return $px / 75 * 2rem;
+}
+//750的设计稿
+@function p2m($px) {
+  @return $px / 75 *1rem;
+}
+
+
+@mixin ellipsis2($lineClamp:1, $lineHeight:px2rem(18)){
+  display: block;
+  line-height: $lineHeight;
+  height: $lineHeight * $lineClamp;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lineClamp;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal;
+}
+
+/*清除浮动(clear-fix)*/
+@mixin clear-fix(){
+    clear:both;
+    &:after{
+        content:'';
+        clear:both;
+        display:block;
+        height:0;
+        overflow:hidden;
+    }
+}
+/*垂直居中(sham)*/
+@mixin sham(){
+    content:'';
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+/*垂直居中(center-xy)*/
+@mixin center-xy(){
+    font-size:0;
+    &:before{
+        content:'';
+        display:inline-block;
+        height:100%;
+        width:0;
+        vertical-align:middle;
+        overflow:hidden;
+    }
+}
+/*三角剪头(angle)*/
+@mixin angle($dir,$px,$color,$default:px2rem(3)){
+    width:0;
+    height:0;
+    content:'';
+    display:inline-block;
+    border:$default solid transparent;
+    #{$dir}:$px solid $color;
+}
+/*省略号(ellipsis)*/
+@mixin ellipsis(){
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+/*多行省略号(more-line-ellipsis)*/
+@mixin more-line-ellipsis($lineNum){
+    overflow:hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lineNum;
+}
