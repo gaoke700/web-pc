@@ -10,11 +10,27 @@ window.MJQ = window.MJQ || window.$;
             dataType: 'json',
             async: true,
             success: null,
-            error: null
+            error: null,
+            complete: null
         };
-
+        
         $.extend(options, (opts || {}));
         if (!options.url) return false;
+        var progress = setTimeout(function(){
+            base.promptDialog({
+                str:'<div class="g-loading g-loading2"><div></div><div></div><div></div><div></div><div></div></div>',
+                time:100000,
+                showTime:false
+            });
+        },100);
+        var complete = options.complete;
+        options.complete = function(data){
+            clearTimeout(progress);
+            if($('.g-dialog-container').length>0){
+                $('.g-dialog-container').remove();
+            }
+            complete && complete();
+        }
         $.ajax(options);
     };
 
